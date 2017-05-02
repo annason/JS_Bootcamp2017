@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Tydzień 3 - zadanie 1</title>
+</head>
+
+<body>
+
+    <style>
+        p>span {
+            color: #A0A0A0;
+            margin-left: 10px;
+            display: inline-block;
+        }
+
+        p>span:before {
+            content: ' // '
+        }
+    </style>
+
+    <h1>Try this in console:</h1>
+
+    <output>
+     <p>string.repeatCustom(-.025) <span>Error: Invalid count value ( argument needs to be a positive integer)</span></p>
+     <p> string.repeatCustom(0);<span>""</span></p>
+     <p> string.repeatCustom(-1);<span>Error: Invalid count value ( argument needs to be a positive integer)</span></p>
+     <p> string.repeatCustom(2);<span>"stringstring"</span></p>
+     <p> string.repeatCustom("Alamakota");<span>Error: Argument needs to be a number type</span></p>
+	 <p>string.repeatCustom(1/10);<span>""</span></p>
+     <p> string.repeatCustom(20);<span>"stringstringstringstringstringstringstringstringstringstringstringstringstringstringstringstringstringstringstringstring"</span></p>
+	 <p> string.repeatCustom(1/0);<span>RangeError: repeat count must be less than infinity</span></p>
+
+
+</output>
+
+    <script src="scripts.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,21 @@
+Body {
+    width: 80vw;
+    margin: 0 auto;
+}
+
+#hidden {
+    display: none;
+    margin-top: 25px;
+    padding: 10px;
+    border: 1px solid red;
+    color: white;
+    background: #E88282;
+}
+
+.showme {
+    display: block!important;
+}
+
+button {
+    margin-top: 10vh;
+}

@@ -1,0 +1,59 @@
+Body {
+  width: 80vw;
+  margin: 0 auto;
+  padding-top: 1.3vh;
+  font-family: 'Open Sans', sans-serif;
+  font-size:17px;
+  line-height:1.2;
+}
+
+input, textarea {
+  box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  display: block;
+  margin-bottom: 15px;
+  width: 350px;
+  padding: 5px;
+  min-height: 30px;
+  border: solid 1px #ccc;
+  transition: 0.5s all;
+ font-family: 'Open Sans', sans-serif;
+ font-size:16px;
+
+
+}
+
+textarea {
+  height: 200px;
+}
+
+.haserror {
+  border: 1px solid #CE6F6F;
+  background: #F4E9E9;
+}
+
+.errordiv {
+  display: inline-block;
+  margin-bottom: 4px;
+  border: solid 1px #A86767;
+  padding: 5px 8px;
+
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
+  color: white;
+  background: #af5b5b;
+  font-size: 80%;
+}
+
+input[type=submit] {
+background-color: #4CAF50; /* Green */
+color:white;
+}
+
+form {
+    max-width:90%;
+}
+input, textarea {
+    max-width:100%;
+}
