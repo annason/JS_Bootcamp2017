@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Tydzień 4 - zadanie 1</title>
+    <link href="bootflat/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="bootflat/css/bootflat.min.css" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800&amp;subset=latin-ext" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="style.css" />
+
+</head>
+
+<body class="mint">
+
+
+
+
+    <main class="container">
+
+        <div class="row">
+            <h1>Czwarty tydzień, pierwsze zadanie!</h1>
+            <div class="col-md-7">
+                <p>Podaj przykłady selektorów, które pozwolą znaleźć na stronie następujące elementy:</p>
+                <ol>
+                    <li>wszystkie elementy &#60;div&#62;, posiadające zarówno klasę grid oraz klasę grid-12.</li>
+                    <li>wszystkie elementy &#60;ap#62, których atrybut href zaczyna się na “http”, znajdujące się w elemencie o klasie nav</li>
+                    <li>wszystkie elementy &#60;inputp&#62, których typ to radio lub checkbox oraz dodatkowo nie są aktualnie zaznaczone (checked).</li>
+                    <li>wyłącznie pierwszy element &#60;p&#62;, który jest pusty (nie zawiera dzieci) oraz znajduje się w elemencie&#60;div&#62; z identyfikatorem text</li>
+                    <li>wszystkie elementy z klasą pagination-item, które nie są elementem &#60;span&#62;</li>
+                </ol>
+
+
+
+                <div>
+                    <h4 class="margin-bottom0">paginacja na li:</h4>
+                    <ul class="pagination pagination-item">
+                        <li><a href="#">1</a></li>
+                        <li><a href="#">2</a></li>
+                        <li><a href="#">3</a></li>
+                        <li><a href="#">4</a></li>
+                        <li><a href="#">5</a></li>
+                    </ul>
+                </div>
+            </div>
+
+
+
+
+
+            <div class="col-md-5">
+                <div class="grid-12 grid">
+                    <b>div klasą grid-12 i grid</b>
+                </div>
+                <div>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed metus nulla, consectetur eget aliquam a, molestie in erat. Donec, <b><a href="http://eduweb.pl" target="_blank">ten link zaczyna się na "http"</a></b> quam et, varius
+                        eros. Cras lorem quam, pellentesque et venenatis
+                    </p>
+
+                    <form>
+                        <input type="text" placeholder="imię" /><br>
+                        <input type="radio" name="test" value="yes" /> <label>radio nie zaznaczone</label><br>
+                        <input type="radio" name="test" value="no" checked/> <label>radio zaznaczone</label><br>
+                        <input type="checkbox" name="test2" value="yes"> c<label>heckbox nie zaznaczony</label><br>
+                        <input type="checkbox" name="test3" value="yes" checked> <label>checkbox zaznaczony</label><br>
+                    </form>
+                    <div id="text">
+                        <p>
+                            Sed metus nulla, consectetur eget aliquam a, <a href="#">molestie</a> in erat.
+                        </p>
+                        <p></p>
+                        <p></p>
+                        <p>
+                            Nullam mattis velit eu egestas sodales. Ut ut ante sit amet elit euismod tempus et fermentum mi.
+                        </p>
+
+
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-md-12">
+                <pre>
+        (function($){
+
+            $("div.grid.grid-12").addClass("highlight");
+            $("a[href^=http]").addClass("highlight");
+            $("input[type=radio]:checked, input[type=checkbox]:checked").next().addClass("highlight");
+            $("div#text p:empty").first().addClass("highlight");
+            $(".pagination-item:not(span)").first().addClass("highlight");
+
+        })(jQuery);
+    </pre>
+            </div>
+
+
+        </div>
+
+    </main>
+
+
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script src="bootflat/js/icheck.min.js"></script>
+    <script src="bootflat/js/jquery.fs.selecter.min.js"></script>
+    <script src="bootflat/js/jquery.fs.stepper.min.js"></script>
+    <script src="scripts.js"></script>
+</body>
+
+</html>

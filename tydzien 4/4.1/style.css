@@ -1,0 +1,236 @@
+Body {
+    background-color: rgb(241, 242, 246);
+    font-size:15px;
+    line-height:1.5;
+}
+
+/*BLUE JEANS*/
+.bluejeans .darkfont, .bluejeans-darkfont {
+    color: #4A89DC;
+}
+.bluejeans .darkfont, .bluejeans-darkfont {
+    border: 1px solid #4A89DC;
+}
+.bluejeans .darkbg, .bluejeans-darkbg {
+    background-color: #4A89DC;
+}
+.bluejeans .lajtfont, .bluejeans-lajtfont {
+    color: #5D9CEC;
+}
+.bluejeans .lajtborder, .bluejeans-lajtborder {
+    border: 1px solid #5D9CEC;
+}
+.bluejeans .lajtbg, .bluejeans-lajtbg {
+    background-color: #5D9CEC;
+}
+/*AQUA*/
+.aqua .darkfont,.aqua-darkfont {
+    color: #3BAFDA;
+}
+.aqua .darkborder, .aqua-darkborder {
+    border: 1px solid #3BAFDA;
+}
+.aqua .darkbg, .aqua-darkbg {
+    background-color: #3BAFDA;
+}
+
+.aqua .lajtfont, .aqua-lajtfont {
+    color: #4FC1E9;
+}
+.aqua .lajtborder, .aqua-lajtborder {
+    border: 1px solid #4FC1E9;
+}
+.aqua .lajtbg, .aqua-lajtbg {
+    background-color: #4FC1E9;
+}
+/*MINT*/
+.mint .darkfont, .mint-darkfont {
+    color: #37BC9B;
+}
+.mint .darkborder, .mint-darkborder {
+    border: 1px solid #37BC9B;
+}
+.mint .darkbg, .mint-darkbg {
+    background-color: #37BC9B;
+}
+.mint .lajtfont, .mint-lajtfont {
+    color: #48CFAD;
+}
+.mint .lajtborder, .mint-lajtborder {
+    border: 1px solid #48CFAD;
+}
+.mint .lajtbg, .mint-lajtbg {
+    background-color: #48CFAD;
+}
+/*GRASS*/
+.grass .darkfont, .grass-darkfont {
+    color: #8CC152;
+}
+.grass .darkborder, .grass-darkborder {
+    border: 1px solid #8CC152;
+}
+.grass .darkbg, .grass-darkbg {
+    background-color: #8CC152;
+}
+.grass .lajtfont , .grass-lajtfont {
+    color: #A0D468;
+}
+.grass .lajtborder, .grass-lajtborder {
+    border: 1px solid #A0D468;
+}
+.grass .lajtbg, .grass-lajtbg {
+    background-color: #A0D468;
+}
+/*SUNFLOWER*/
+.sunflower .darkfont, .sunflower-darkfont {
+    color: #F6BB42;
+}
+.sunflower .darkborder, .sunflower-darkborder {
+    border: 1px solid #F6BB42;
+}
+.sunflower .darkbg, .sunflower-darkbg {
+    background-color: #F6BB42;
+}
+.sunflower .lajtfont, .sunflower-lajtfont {
+    color: #FFCE54;
+}
+.sunflower .lajtborder, .sunflower-lajtborder {
+    border: 1px solid #FFCE54;
+}
+.sunflower .lajtbg, .sunflower-lajtbg {
+    background-color: #FFCE54;
+}
+/*GRAPEFRUIT*/
+.grapefruit .darkfont, .grapefruit-darkfont {
+    color: #DA4453;
+}
+.grapefruit .darkborder, .grapefruit-darkborder {
+    border: 1px solid #DA4453;
+}
+.grapefruit .darkbg,.grapefruit-darkbg {
+    background-color: #DA4453;
+}
+.grapefruit .lajtfont, .grapefruit-lajtfont {
+    color: #ED5565;
+}
+.grapefruit .lajtborder ,.grapefruit-lajtborder {
+    border: 1px solid #ED5565;
+}
+.grapefruit .lajtbg, .grapefruit-lajtbg {
+    background-color: #ED5565;
+}
+/*LAVENDER*/
+.lavender .darkfont, .lavender-darkfont {
+    color: #967ADC;
+}
+.lavender .darkborder, .lavender-darkborder {
+    border: 1px solid #967ADC;
+}
+.lavender .darkbg, .lavender-darkbg {
+    background-color: #967ADC;
+}
+.lavender .lajtfont, .lavender-lajtfont {
+    color: #AC92EC;
+}
+.lavender .lajtborder, .lavender-lajtborder {
+    border: 1px solid #AC92EC;
+}
+.lavender .lajtbg, .lavender-lajtbg {
+    background-color: #AC92EC;
+}
+/*PINK ROSE*/
+.pinkrose .darkfont, .pinkrose-darkfont {
+    color: #D770AD;
+}
+.pinkrose .darkborder, .pinkrose-darkborder {
+    border: 1px solid #D770AD;
+}
+.pinkrose .darkbg, .pinkrose-darkbg {
+    background-color: #D770AD;
+}
+.pinkrose .lajtfont, .pinkrose-lajtfont {
+    color: #EC87C0;
+}
+.pinkrose .lajtborder, .pinkrose-lajtborder {
+    border: 1px solid #EC87C0;
+}
+.pinkrose .lajtbg, .pinkrose-lajtbg {
+    background-color: #EC87C0;
+}
+/*LIGHT GRAY*/
+.lightgray .darkfont, .lightgray-darkfont {
+    color: #E6E9ED;
+}
+.lightgray .darkborder, .lightgray-darkborder {
+    border: 1px solid #E6E9ED;
+}
+.lightgray .darkbg , .lightgray-darkbg {
+    background-color: #E6E9ED;
+}
+.lightgray .lajtfont, .lightgray-lajtfont {
+    color: #F5F7FA;
+}
+.lightgray .lajtborder, .lightgray-lajtborder {
+    border: 1px solid #F5F7FA;
+}
+.lightgray .lajtbg, .lightgray-lajtbg {
+    background-color: #F5F7FA;
+}
+/*MEDIUM GRAY*/
+.mediumgray .darkfont, .mediumgray-darkfont {
+    color: #CCD1D9;
+}
+.mediumgray .darkborder, .mediumgray-darkborder {
+    border: 1px solid #CCD1D9;
+}
+.mediumgray .darkbg, .mediumgray-darkbg {
+    background-color: #CCD1D9;
+}
+.mediumgray .lajtfont, .mediumgray-lajtfont {
+    color: #AAB2BD;
+}
+.mediumgray .lajtborder, .mediumgray-lajtborder {
+    border: 1px solid #AAB2BD;
+}
+.mediumgray .lajtbg, .mediumgray-lajtbg {
+    background-color: #AAB2BD;
+}
+/*DARK GRAY*/
+.darkgray .darkfont, .darkgray-darkfont {
+    color: #434A54;
+}
+.darkgray .darkborder, .darkgray-darkborder {
+    border: 1px solid #434A54;
+}
+.darkgray .darkbg, .darkgray-darkbg {
+    background-color: #434A54;
+}
+.darkgray .lajtfont, .darkgray-lajtfont {
+    color: #656D78;
+}
+.darkgray .lajtborder, .darkgray-lajtborder {
+    border: 1px solid #656D78;
+}
+.darkgray .lajtbg, .darkgray-lajtbg {
+    background-color: #656D78;
+}
+
+.margin-bottom0 {
+    margin-bottom:0px!important;
+}
+
+
+/*************** specific */
+
+
+input, input[type="radio"] {
+    margin-top:5px;
+    margin-bottom:5px;
+}
+
+.highlight {
+    border: solid 1px #DA4453;
+    background-color: rgba(215, 44, 44, 0.1);
+    padding:2px;
+    border-radius:5px;
+}
