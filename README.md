@@ -32,7 +32,7 @@ Titanic
 
 </pre>
 
-<h2>3. Funkcja konwertująca wartość na typ Boolean<h2>
+<h2>3. Funkcja konwertująca wartość na typ Boolean</h2>
 
 <p>Utwórz funkcję o nazwie toBoolean, która będzie przyjmowała jeden parametr. Po
 przekazaniu do niej wartości przy jej wywołaniu, wartość ta powinna zostać skonwertowana
