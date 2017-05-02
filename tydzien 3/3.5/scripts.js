@@ -17,16 +17,17 @@
 function getPage() {
 
     var searchurl = window.location.search;
-    var reg = /(\?page=)(.)/g;
+    var reg = /(page=)(.)/g;
 
-    var cutReg = searchurl.replace(reg, function(match, g1, g2, offset, string) {
-        return g2;
-    });
+    var thePage = searchurl.match(reg);
+    var number = reg.exec(thePage)[2];
 
-    var number = Number(cutReg);
+    console.log(number);
 
-    if (Number(number)) {
-        return number;
+    var isPage = Number(number);
+
+    if (Number(isPage)) {
+        return isPage;
     } else {
         return null;
     }
