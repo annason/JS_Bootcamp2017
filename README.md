@@ -1,7 +1,11 @@
 # JS Bootcamp 2017
 
+<ul>
+<li><a href="#tydzien1">tydzień1</a></li>
+</ul>
 
-<h1>Tydzień 1</h1>
+
+<h1><a name="tydzien1"><a>Tydzień 1</h1>
 
 <h2>1. Instrukcje warunkowe</h2>
 <p>Za pomocą instrukcji warunkowej if (wraz z blokami else) lub switch, stwórz skrypt, który
