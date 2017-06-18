@@ -226,7 +226,7 @@ elemencie &lt;div&gt; z identyfikatorem text</li>
 znalezione powyższymi selektorami elementy, ale możesz równie dobrze po prostu wypisać
 te selektory w pliku tekstowym, bez tworzenia dla tego przykładu specjalnej strony.</p>
 
-<h2>2. Pokazywanie elementów i animacje<h2>
+<h2>2. Pokazywanie elementów i animacje</h2>h2>
 <p>Stwórz kontener z przykładową nawigacją, który domyślnie nie będzie widoczny. Może on
 znajdować się na samej górze strony lub w sidebarze. Następnie umieść na stronie
 przycisk typu “hamburger menu” ☰, po kliknięciu którego wysunie się wcześniej ukryte
@@ -243,7 +243,7 @@ gdy zostanie wpisane np. jakieś imię, pojawi się ono na stronie. Dodatkowo za
 jeśli nic nie zostało wpisane do pola, nie wstawiać na stronę pustego elementu &lt;li&gt;.</p>
 
 <p>
-    <strong>www:</strong><a href="https://annason.github.io/slidemenu/">https://annason.github.io/slidemenu/</a>
+    <strong>www: </strong><a href="https://annason.github.io/slidemenu/">https://annason.github.io/slidemenu/</a>
 </p>
 
 
@@ -280,7 +280,7 @@ oraz treść w postaci paragrafów &lt;p&gt;. Na samym dole strony znajdziesz po
 skrypty. Jest to biblioteka jQuery, a także plik jquery.toc.js, w którym powinieneś
 napisać cały kod pluginu. Poniżej tych skryptów znajduje się skrypt liniowy, wywołujący
 Twój plugin na zebranych elementach o klasie section. Na samej górze strony znajdziesz
-spis treści, zawarty w elemencie&lt;div&gt; z klasą toc.</p>
+spis treści, zawarty w elemencie &lt;div&gt; z klasą toc.</p>
 <p>Twoim zadaniem będzie usunięcie (ręczne, w kodzie) tego elementu, a następnie napisanie
 pluginu tak, aby taki element generował i wstawiał go dokładnie w to samo miejsce
 (podpowiedź: przed pierwszym elementem &lt;section&gt;). Treść odnośnika powinna
@@ -317,19 +317,55 @@ sposób konfigurować pod swoje potrzeby.
 
 <h1><a name="tydzien5"><a>Tydzień 5</h1>
 
-<h2>1. Pokazywanie ukrytego elementu</h2>
+<h2>1. Dekompozycja obiektu z danych JSON</h2>
 
 <p>
-    Stwórz projekt z ukrytym elementem HTML (np. div z display:none w CSS), a także przyciskiem (button>. Przypisz na kliknięcie przycisku funkcję, która pokaże ukryty element, gdy jest niewidoczny i ukryje go, gdy jest widoczny. Podczas zmiany stanu widoczności
-    tego elementu, zmień również tekst przycisku np. z “Pokaż treść” na “Ukryj treść” i na odwrót.
+    Pamiętasz funkcję getJSON, którą stworzyłeś w tygodniu trzecim? Za jej pomocą pobierz
+dane JSON z tego adresu: http://code.eduweb.pl/bootcamp/json/. Następnie w funkcji
+callback, gdzie te dane będą już zamienione na obiekt JavaScript, wykorzystaj
+dekompozycję (destructuring), aby utworzyć za pomocą zapisu ES6 nowe zmienne, które
+przechowywać będą dane spod kluczy: name, username, email, address.geo[0],
+address.geo[1], website i company.name. Powyższe dane wstaw do template stringu,
+dodając odpowiednie etykiety jak np. Imię, Firma czy Adres e-mail wraz z niezbędnym
+kodem HTML, np. w formie linku dla website. W przypadku współrzędnych
+geograficznych, wstaw je do takiego linku: &lt;a href=“http://bing.com/maps/
+default.aspx?cp=LAT~LON”&gt;  Pokaż na mapie &lt;/a&gt; , gdzie LAT i LON zastąpisz kolejno
+przez address.geo[0] i address.geo[1], które na tym etapie powinny być już w
+zmiennych. Powyższą operację wykonaj oczywiście dla wszystkich obiektów z tablicy.
+Cały sformatowany ciąg wraz ze wstawkami HTML wstaw na stronę. Sam proces
+pobierania danych Ajaxem i dalszego ich formatowania, możesz wywołać za pomocą
+kliknięcia jakiegoś przycisku.
 </p>
 
-<h2>2. Walidator formularza</h2>
+<h2>2. Funkcja tagująca do formatowania cen</h2>
 <p>
-    Stwórz prosty walidator formularza, który zawierał będzie pola input o typach “text”, “email”, “number” oraz element textarea. Dodaj do elementu form atrybut novalidate, aby wyłączyć domyślną walidację przeglądarki. Od Ciebie zależy, czy chcesz wyświetlać
-    komunikaty o błędach czy tylko podświetlać niepoprawnie uzupełnione pola np. na czerwono. Za poprawnie uzupełnione pole input o typie “text” lub pole textarea uznajemy takie, które ma wpisany przynajmniej jeden znak. W przypadku pola o typie “email”
-    sprawdź czy zawiera ono znak @, a w przypadku pola o typie “number” czy podana wartość jest liczbą (pamiętaj, że DOM zwróci Ci zawsze wartość o typie String, więc musisz znaleźć sposób, jak sprawdzić czy string ten zawiera wyłącznie liczbę).
+    Utwórz funkcję tagującą, która użyta na tzw. template stringu w ES6, sformatuje podane w
+nim ceny za pomocą kodu: n.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, '$1,');
+(pożyczamy ciekawe rozwiązanie z tego postu). Zanim jednak dokonasz takiego
+formatowania, przelicz cenę przez kurs podanej przy wywołaniu funkcji tagującej waluty.
+Zakładamy, że ceny bazowe są podane w złotówkach, a nazwa i kurs waluty dostępna
+będzie pod window.currencies (mogłaby być w ten sposób dodana np. podczas
+renderowania strony przez system CMS, a dzięki temu mamy dostęp do tych danych w
+kodzie JavaScript. My jednak wpiszemy to sobie na sztywno). </p>
+
+
+
+<p> Przykładowe użycie tego
+kodu powinno wyglądać następująco: https://pastebin.com/6A3WZF6h. Zauważ, że przed
+samym template stringiem nie jest podana wyłącznie nazwa funkcji formatPrice, ale jest
+ona wywoływana z argumentem “GBP”. Jak być może się domyślasz, oznacza to, że ta
+funkcja ma zwrócić inną funkcję, która zostanie użyta jako tag function. Argument jest
+przekazywany po to, aby można go było zmienić np. na “USD” i wówczas funkcja powinna
+przeliczyć cenę po kursie dolara, a także dodać przyrostki USD do ceny w sformatowanym
+ciągu. Zwracana funkcja, która posłuży jako funkcja tagująca, powinna mieć zatem dostęp
+do zmiennej przechowującej kurs oraz nazwę waluty dla podanego argumentu.
+Zrealizujesz to za pomocą domknięcia.
 </p>
+
+<p>
+<strong>www: </strong> https://annason.github.io/FauxBasket/
+</p>
+
 <h2>3. Odliczanie od 10 do 0</h2>
 <p>
     Stwórz projekt, który po uruchomieniu odpowiedniej funkcji, pozwoli na odliczanie od 10 do 0. Wszystkie wartości powinny być wyświetlane na stronie, a czas pomiędzy zmianą wartości powinien wynosić 1 sekundę. Choć cały Twój kod może być podzielony na
