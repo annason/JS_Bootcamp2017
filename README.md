@@ -342,8 +342,7 @@ kodzie JavaScript. My jednak wpiszemy to sobie na sztywno). </p>
 
 
 
-<p> Przykładowe użycie tego
-kodu powinno wyglądać następująco: https://pastebin.com/6A3WZF6h. Zauważ, że przed
+<p> Przykładowe użycie tego kodu powinno wyglądać następująco: https://pastebin.com/6A3WZF6h. Zauważ, że przed
 samym template stringiem nie jest podana wyłącznie nazwa funkcji formatPrice, ale jest
 ona wywoływana z argumentem “GBP”. Jak być może się domyślasz, oznacza to, że ta
 funkcja ma zwrócić inną funkcję, która zostanie użyta jako tag function. Argument jest
