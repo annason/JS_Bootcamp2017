@@ -358,34 +358,46 @@ Zrealizujesz to za pomocą domknięcia.
 <strong>www: </strong> https://annason.github.io/FauxBasket/
 </p>
 
-<h2>3. Odliczanie od 10 do 0</h2>
+<h2>3. Przepisanie konstruktorów z ES5 na klasy w ES6</h2>
 <p>
-    Stwórz projekt, który po uruchomieniu odpowiedniej funkcji, pozwoli na odliczanie od 10 do 0. Wszystkie wartości powinny być wyświetlane na stronie, a czas pomiędzy zmianą wartości powinien wynosić 1 sekundę. Choć cały Twój kod może być podzielony na
-    wiele funkcji, jedna z nich powinna uruchamiać proces odliczania. Przy wywołaniu tej funkcji, daj możliwość przekazania innej funkcji jako argument. Przekazaną funkcję wywołaj, gdy licznik osiągnie wartość 0.
+    Wróćmy pamięcią do zadania 4 z tygodnia drugiego. Uzupełniłeś w nim kod tak, aby
+dziedziczenie prototypowe działało poprawnie. Tutaj znajdziesz kod, od którego należało
+wtedy zacząć: https://pastebin.com/YEBncx0d. Teraz Twoim zadaniem jest przepisanie
+tego działającego już kodu tak, aby korzystał z klas w ES6. Przepisz zarówno klasę
+EventEmitter jak i klasę Database, wykorzystując oczywiście dziedziczenie. Samo użycie
+tego kodu, a więc tworzenie nowych instancji obiektów i korzystanie z ich metod, pozostaje
+bez zmian.
 </p>
 
+
+
+<h2>4. Iterator dla klasy losującej liczby</h2>
+
 <p>
-    Istotą przekazywania jednej funkcji do drugiej (w tym przypadku nazwalibyśmy ją funkcją callback) jest to, aby dać użytkownikowi naszego kodu pewną gotową funkcjonalność (odliczanie od 10 do 0), ale także możliwość dodania czegoś od siebie, tj. wykonania
-    własnej funkcji po zakończeniu odliczania. W przekazanej funkcji możesz wpisać po prostu console.log(“Odliczanie zakończone!”).
+    W lekcjach drugiego tygodnia, w sekcji Praktyczne projekty znajduje się lekcja
+    pt. Losowanie Dużego Lotka. Utwórz z użyciem zapisu ES6 klasę Lotek, która zawierać
+    będzie metodę getNumbers, a ta z kolei wylosuje liczby według logiki ze wspomnianej
+    lekcji. Metoda ta powinna być wywoływana od razu przy tworzeniu nowej instancji obiektu
+    tej klasy. Wylosowane liczby musisz zatem zapisać wewnątrz obiektu. Dodatkowo stwórz
+    metodę checkNumbers, która pozwoli podać 6 liczb jako osobne argumenty i zwróci obiekt,
+    który zawierał będzie właściwości numbers, gdzie będzie tablica z trafionymi liczbami oraz
+    count, gdzie będzie liczba trafionych numerów.</p>
+    <p>
+
+    To jednak dopiero początek, gdyż najważniejszym celem tego zadania jest dodanie
+    iteratora do tej klasy. Po poprawnym jego dodaniu, kiedy na obiekcie utworzonym z tej
+    klasy użyjemy operatora …spread lub pętli for…of, powinien on zwrócić kolejne
+    wylosowane liczby. Przykładowe użycie tego kodu powinno wyglądać następująco:
+    https://pastebin.com/0zygc3hk.
 </p>
 
-<h2>4. Dziedziczenie z klasy EventEmitter</h2>
-
-<P>
-    Przygotowany pod adresem http://pastebin.com/YEBncx0d kod zmodyfikuj tak, aby obiekty tworzone z klasy Database mogły korzystać z wszystkich metody klasy EventEmitter. Na chwilę obecną, podany kod wygeneruje błąd, gdyż klasa Database nie zawiera metody
-    on oraz emit. Skorzystaj z dziedziczenia prototypowego, aby klasą nadrzędną dla Database stała się klasa EventEmitter. Zadanie to wymaga od Ciebie dopisania wyłącznie kilku linijek kodu.
-</P>
-
-<h2>5. Funkcja debounce</h2>
+<h2>5. Preloader obrazów z użyciem Promise</h2>
 
 <p>
-    Stwórz funkcję o nazwie debounce, która przyjmie przy wywołaniu dwa argumenty. Pierwszy z nich to inna funkcja do późniejszego wywołania, a drugi to czas w milisekundach. Po takim wywołaniu, funkcja ta powinna zwrócić nową funkcję, którą można zapisać
-    np. w zmiennej. Następnie tę nową funkcję będzie można wielokrotnie wywoływać (a ona powinna wywołać pierwotnie przekazaną funkcję), jednak jeśli czas pomiędzy poszczególnymi wywołaniami będzie krótszy, niż podany wcześniej (wspomniany argument z
-    czasem w milisekundach), to funkcja nie powinna nic zrobić, ale ustawić licznik na kolejne Xms i dopiero wtedy się wywołać.
-</p>
-
-<p>
-    Rozwiązania typu debounce stosuje się np. przy obsłudze zdarzenia scroll w przeglądarkach, które wywoływane jest bardzo wiele razy. Jeśli nie chcemy, aby nasza funkcja negatywnie wpływała na wydajność podczas scrollowania, a wystarczy, że wywoła się np.
-    100ms po zakończeniu scrollowania, wtedy stosujemy funkcję debounce. Innym przykładem jest np. zdarzenie resize, które też jest wielokrotnie wywoływane podczas skalowania okna przeglądarki, a nam może zależeć, aby wywołać pewien kod dopiero wtedy,
-    gdy taka akcja się zakończy. Całość przetestować możesz z użyciem tego kodu: https://pastebin.com/J0BJVqtR. Twoim zadaniem jest dopisanie funkcji debounce, aby ten kod zaczął działać.
+    W lekcjach czwartego tygodnia, w sekcji Ajax w Praktyce oraz model Pub/Sub znajduje się
+lekcja pt. Praktyczny przykład: Preloader obrazów. Utwórz podobne rozwiązanie, ale nie
+korzystając z jQuery, a z natywnych metod DOM API. Zamiast obiektu Deferred z jQuery,
+wykorzystaj Promise dostępną w ES6. Załadowane w tle obrazy zamień następnie na
+elementy <img> i wstaw na stronę. Przykładowe użycie tego kodu powinno wyglądać
+następująco: https://pastebin.com/jM7N6NTn
 </p>
