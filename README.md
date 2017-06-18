@@ -51,7 +51,8 @@ toBoolean(“”); // zwraca wartość false</pre>
 <h2>4. Funkcja sumująca przekazane liczby</h2>
 
 <p>Stwórz funkcję o nazwie sum, która będzie przyjmowała jeden parametr, którym będzie tablica z liczbami. Funkcja ta powinna zsumować wszystkie liczby z przekazanej tablicy, a następnie zwrócić wynik takiej operacji. Przykładowe jej użycie powinno wyglądać
-    tak:</p>
+    tak:
+</p>
 
 <pre>sum([1, 10, 5, 4]); // zwraca wartość 20</pre>
 
@@ -116,51 +117,61 @@ toBoolean(“”); // zwraca wartość false</pre>
 <h2>1. Polyfill metody repeat dla String</h2>
 
 <p>
-    W standardzie EcmaScript 2015 (o którym więcej w 5 i 6 tygodniu Bootcampu) pojawiła się
-    nowa metoda dostępna na obiektach typu String o nazwie repeat. Jej użycie wygląda
-    następująco:</p>
-    <code>
+    W standardzie EcmaScript 2015 (o którym więcej w 5 i 6 tygodniu Bootcampu) pojawiła się nowa metoda dostępna na obiektach typu String o nazwie repeat. Jej użycie wygląda następująco:
+</p>
+<code>
 
     “hej ”.repeat(3) // zwraca “hej hej hej ”</code>
-    <p>
 
-    </p>Metoda ta jest dostępna we wszystkich nowoczesnych przeglądarkach internetowych, ale aby poćwiczyć rozszerzanie wbudowanych typów, utwórz jej polyfill. W kodzie sprawdź najpierw czy taka metoda już w przeglądarce została zaimplementowana, a jeśli nie, to dopisz własną funkcję,
+
+</p>Metoda ta jest dostępna we wszystkich nowoczesnych przeglądarkach internetowych, ale aby poćwiczyć rozszerzanie wbudowanych typów, utwórz jej polyfill. W kodzie sprawdź najpierw czy taka metoda już w przeglądarce została zaimplementowana, a jeśli
+nie, to dopisz własną funkcję,
 </p>
 
-<h2>2. Walidator formularza</h2>
+<h2>2. Wrapper Toggler dla elementów z drzewa DOM</h2>
 <p>
-    Stwórz prosty walidator formularza, który zawierał będzie pola input o typach “text”, “email”, “number” oraz element textarea. Dodaj do elementu form atrybut novalidate, aby wyłączyć domyślną walidację przeglądarki. Od Ciebie zależy, czy chcesz wyświetlać
-    komunikaty o błędach czy tylko podświetlać niepoprawnie uzupełnione pola np. na czerwono. Za poprawnie uzupełnione pole input o typie “text” lub pole textarea uznajemy takie, które ma wpisany przynajmniej jeden znak. W przypadku pola o typie “email”
-    sprawdź czy zawiera ono znak @, a w przypadku pola o typie “number” czy podana wartość jest liczbą (pamiętaj, że DOM zwróci Ci zawsze wartość o typie String, więc musisz znaleźć sposób, jak sprawdzić czy string ten zawiera wyłącznie liczbę).
+    Do przygotowanego pod adresem http://pastebin.com/hUK5tnh3 kodu dodaj konstruktor (klasę) o nazwie Toggler. Przy tworzeniu nowych jej instancji z użyciem słowa kluczowego <i>new </i>(jak możesz zobaczyć w przygotowanym kodzie) przekazywać będziemy
+    selektor. Za jego pomocą należy znaleźć na stronie odpowiedni element (skorzystaj z metody document.querySelector) i zapisać go w nowo stworzonym obiekcie.</p>
+<p>Następnie dodaj 3 metody. Pierwsza z nich o nazwie getElem powinna po prostu zwrócić znaleziony wcześniej element. Metoda show i hide powinny kolejno pokazywać i ukrywać element. Jeśli wszystko wykonasz poprawnie, kod który został już napisany powinien
+    działać bez żadnych modyfikacji. Zauważ, że do elementu o identyfikatorze button zostało przypisane zdarzenie kliknięcia. Taki element musisz wstawić na stronę, podobnie jak i element, którego selektor zostanie przekazany przy tworzeniu nowego obiektu
+    klasy Toggler.
 </p>
-<h2>3. Odliczanie od 10 do 0</h2>
+<h2>3. Ajaxowy polyfill dla funkcji fetch</h2>
 <p>
-    Stwórz projekt, który po uruchomieniu odpowiedniej funkcji, pozwoli na odliczanie od 10 do 0. Wszystkie wartości powinny być wyświetlane na stronie, a czas pomiędzy zmianą wartości powinien wynosić 1 sekundę. Choć cały Twój kod może być podzielony na
-    wiele funkcji, jedna z nich powinna uruchamiać proces odliczania. Przy wywołaniu tej funkcji, daj możliwość przekazania innej funkcji jako argument. Przekazaną funkcję wywołaj, gdy licznik osiągnie wartość 0.
-</p>
-
-<p>
-    Istotą przekazywania jednej funkcji do drugiej (w tym przypadku nazwalibyśmy ją funkcją callback) jest to, aby dać użytkownikowi naszego kodu pewną gotową funkcjonalność (odliczanie od 10 do 0), ale także możliwość dodania czegoś od siebie, tj. wykonania
-    własnej funkcji po zakończeniu odliczania. W przekazanej funkcji możesz wpisać po prostu console.log(“Odliczanie zakończone!”).
+    Napisz polyfill dla funkcji fetch (nie będziemy się tutaj trzymać dokładnie tego, w jaki sposób ona działa, stworzysz jedynie prostą jej wersję). Wykorzystaj obiekt XMLHttpRequest w ten sposób, aby docelowo korzystanie z funkcji fetch wyglądało następująco:
 </p>
 
-<h2>4. Dziedziczenie z klasy EventEmitter</h2>
-
-<P>
-    Przygotowany pod adresem http://pastebin.com/YEBncx0d kod zmodyfikuj tak, aby obiekty tworzone z klasy Database mogły korzystać z wszystkich metody klasy EventEmitter. Na chwilę obecną, podany kod wygeneruje błąd, gdyż klasa Database nie zawiera metody
-    on oraz emit. Skorzystaj z dziedziczenia prototypowego, aby klasą nadrzędną dla Database stała się klasa EventEmitter. Zadanie to wymaga od Ciebie dopisania wyłącznie kilku linijek kodu.
-</P>
-
-<h2>5. Funkcja debounce</h2>
-
+<code>
+fetch("url", function(data) {
+console.log("Sukces");
+console.log(data);
+}, function(err) {
+console.log("Wystąpił błąd!");
+console.log(err);
+});
+</code>
 <p>
-    Stwórz funkcję o nazwie debounce, która przyjmie przy wywołaniu dwa argumenty. Pierwszy z nich to inna funkcja do późniejszego wywołania, a drugi to czas w milisekundach. Po takim wywołaniu, funkcja ta powinna zwrócić nową funkcję, którą można zapisać
-    np. w zmiennej. Następnie tę nową funkcję będzie można wielokrotnie wywoływać (a ona powinna wywołać pierwotnie przekazaną funkcję), jednak jeśli czas pomiędzy poszczególnymi wywołaniami będzie krótszy, niż podany wcześniej (wspomniany argument z
-    czasem w milisekundach), to funkcja nie powinna nic zrobić, ale ustawić licznik na kolejne Xms i dopiero wtedy się wywołać.
+    a zatem jako pierwszy argument przekazujemy adres URL (wyślij pod niego zapytanie GET), jako drugi funkcję, którą należy wykonać jeśli wszystko się powiedzie (przekaż jej pobrane dane), a jako trzeci funkcję, która wykona się na wypadek błędu (przekaż
+    jej obiekt z błędem lub komunikat tekstowy). W nowoczesnych przeglądarkach istnieje już funkcja fetch, a zatem aby jej nie nadpisywać, możesz nadać jej inną nazwę, np. fecz. Jako adres URL, z którego
 </p>
 
+<h2>4. Funkcja getJSON</h2>
+
+<p>Mając już rozwiązanie zadania trzeciego, przepisz swój kod tak, aby stworzyć nową funkcję o nazwie getJSON. Idea działania i użycie będą bardzo podobne:</p>
+<code>getJSON("url", function(data) {
+console.log("Sukces");
+console.log(data);
+// typeof data powinno zwrócić “object”
+}, function(err) {
+console.log("Wystąpił błąd!");
+console.log(err);
+});
+</code>
 <p>
-    Rozwiązania typu debounce stosuje się np. przy obsłudze zdarzenia scroll w przeglądarkach, które wywoływane jest bardzo wiele razy. Jeśli nie chcemy, aby nasza funkcja negatywnie wpływała na wydajność podczas scrollowania, a wystarczy, że wywoła się np.
-    100ms po zakończeniu scrollowania, wtedy stosujemy funkcję debounce. Innym przykładem jest np. zdarzenie resize, które też jest wielokrotnie wywoływane podczas skalowania okna przeglądarki, a nam może zależeć, aby wywołać pewien kod dopiero wtedy,
-    gdy taka akcja się zakończy. Całość przetestować możesz z użyciem tego kodu: https://pastebin.com/J0BJVqtR. Twoim zadaniem jest dopisanie funkcji debounce, aby ten kod zaczął działać.
+
+    Różnica jest taka, że tym razem pod parametrem data przekazanym w funkcji callback, powinien się znajdować javascriptowy obiekt, a nie string przysłany z serwera. Serwer, który przygotowaliśmy pod tym adresem: http://code.eduweb.pl/bootcamp/users/ działa
+    tak, że po otrzymaniu standardowego zapytania GET, np. kiedy wpiszesz ten adres w przeglądarce lub wyślesz zapytanie Ajaxem, zwróci dane zawarte w kodzie HTML. Jeśli jednak przy wysyłaniu zapytania dodasz nagłówek Accept: application/json, to serwer
+    zwróci te same dane, ale w formacie JSON (bez kodu HTML).</p>
+<p>Z poziomu Twojego kodu JavaScript, otrzymane Ajaxem dane to cały czas typ String, ale za pomocą metody JSON.parse możesz ten string łatwo zamienić na javascriptowy obiekt. To jest właśnie Twoje zadanie. Wysyłając żądanie do serwera, dodaj wspomniany wcześniej
+    nagłówek za pomocą metody setRequestHeader, a otrzymane dane sparsuj za pomocą JSON.parse i dopiero wtedy przekaż jako parametr data do funkcji callback.
 </p>
