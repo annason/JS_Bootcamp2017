@@ -139,15 +139,16 @@ nie, to dopisz własną funkcję,
     Napisz polyfill dla funkcji fetch (nie będziemy się tutaj trzymać dokładnie tego, w jaki sposób ona działa, stworzysz jedynie prostą jej wersję). Wykorzystaj obiekt XMLHttpRequest w ten sposób, aby docelowo korzystanie z funkcji fetch wyglądało następująco:
 </p>
 
-<code>
+<pre>
 fetch("url", function(data) {
-console.log("Sukces");
-console.log(data);
+    console.log("Sukces");
+    console.log(data);
 }, function(err) {
-console.log("Wystąpił błąd!");
-console.log(err);
+    console.log("Wystąpił błąd!");
+    console.log(err);
 });
-</code>
+</pre>
+
 <p>
     a zatem jako pierwszy argument przekazujemy adres URL (wyślij pod niego zapytanie GET), jako drugi funkcję, którą należy wykonać jeśli wszystko się powiedzie (przekaż jej pobrane dane), a jako trzeci funkcję, która wykona się na wypadek błędu (przekaż
     jej obiekt z błędem lub komunikat tekstowy). W nowoczesnych przeglądarkach istnieje już funkcja fetch, a zatem aby jej nie nadpisywać, możesz nadać jej inną nazwę, np. fecz. Jako adres URL, z którego
@@ -156,17 +157,18 @@ console.log(err);
 <h2>4. Funkcja getJSON</h2>
 
 <p>Mając już rozwiązanie zadania trzeciego, przepisz swój kod tak, aby stworzyć nową funkcję o nazwie getJSON. Idea działania i użycie będą bardzo podobne:</p>
-<code>getJSON("url", function(data) {
-console.log("Sukces");
-console.log(data);
-// typeof data powinno zwrócić “object”
-}, function(err) {
-console.log("Wystąpił błąd!");
-console.log(err);
-});
-</code>
-<p>
 
+<pre>getJSON("url", function(data) {
+    console.log("Sukces");
+    console.log(data);
+    // typeof data powinno zwrócić “object”
+}, function(err) {
+    console.log("Wystąpił błąd!");
+    console.log(err);
+});
+</pre>
+
+<p>
     Różnica jest taka, że tym razem pod parametrem data przekazanym w funkcji callback, powinien się znajdować javascriptowy obiekt, a nie string przysłany z serwera. Serwer, który przygotowaliśmy pod tym adresem: http://code.eduweb.pl/bootcamp/users/ działa
     tak, że po otrzymaniu standardowego zapytania GET, np. kiedy wpiszesz ten adres w przeglądarce lub wyślesz zapytanie Ajaxem, zwróci dane zawarte w kodzie HTML. Jeśli jednak przy wysyłaniu zapytania dodasz nagłówek Accept: application/json, to serwer
     zwróci te same dane, ale w formacie JSON (bez kodu HTML).</p>
@@ -185,14 +187,14 @@ regularne, zwróć z funkcji 2 (typ Number) lub null, jeśli query string ?page=
 podany lub będzie niepoprawny, np. ?page=tekst
 Użycie funkcji powinno wyglądać następująco:</p>
 
-<code>
-    // dla adresu np. http://localhost/test/?page=2
-getPage(); // zwraca 2
+<pre>
+// dla adresu np. http://localhost/test/?page=2
+    getPage(); // zwraca 2
 // dla adresu np. http://localhost/test/
-getPage(); // zwraca null
+    getPage(); // zwraca null
 // dla adresu np. http://localhost/test/?page=nieliczba
-getPage(); // zwraca null
-</code>
+    getPage(); // zwraca null
+</pre>
 
 
 
