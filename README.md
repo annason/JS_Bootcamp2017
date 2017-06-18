@@ -225,25 +225,12 @@ elemencie &lt;div&gt; z identyfikatorem text</li>
 znalezione powyższymi selektorami elementy, ale możesz równie dobrze po prostu wypisać
 te selektory w pliku tekstowym, bez tworzenia dla tego przykładu specjalnej strony.</p>
 
-<h2>2. Pętle</h2>
-<p>Stwórz skrypt, który będzie wyświetlał filmy z podanego tutaj obiektu https://pastebin.com/kCbqehMm. Skrypt powinien wyświetlać filmy z 3 kategorii (użyj do tego celu console.log()) w następujący sposób:</p>
-<pre>Dla dzieci:
-Kubuś Puchatek i Przyjaciele
-Zwariowane Melodie
-Piotruś Pan
-=======================
-Dla młodzieży:
-Szkoła uczuć
-Podróż za jeden uśmiech
-Szatan z 7-ej klasy
-=======================
-Dla dorosłych:
-Gwiezdne Wojny
-Szklana Pułapka
-Titanic
-=======================
-
-</pre>
+<h2>2. Pokazywanie elementów i animacje/h2>
+<p>Stwórz kontener z przykładową nawigacją, który domyślnie nie będzie widoczny. Może on
+znajdować się na samej górze strony lub w sidebarze. Następnie umieść na stronie
+przycisk typu “hamburger menu” ☰, po kliknięciu którego wysunie się wcześniej ukryte
+menu. Animacja jaką zastosujesz, zależy od Ciebie. Ponowne kliknięcie przycisku powinno
+chować nawigację.</p>
 
 <h2>3. Funkcja konwertująca wartość na typ Boolean</h2>
 
