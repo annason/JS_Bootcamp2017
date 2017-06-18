@@ -456,25 +456,25 @@ zaktualizować tekst elementu &lt;li&gt;. Plusem tego rozwiązania jest fakt, ż
 &lt;li&gt; zostanie usunięty, to również obiekt z danymi zostanie usunięty z pamięci, bo takie
 zadanie realizuje właśnie WeakMap.</p>
 
-<h2>2. Pętle</h2>
-<p>Stwórz skrypt, który będzie wyświetlał filmy z podanego tutaj obiektu https://pastebin.com/kCbqehMm. Skrypt powinien wyświetlać filmy z 3 kategorii (użyj do tego celu console.log()) w następujący sposób:</p>
-<pre>Dla dzieci:
-Kubuś Puchatek i Przyjaciele
-Zwariowane Melodie
-Piotruś Pan
-=======================
-Dla młodzieży:
-Szkoła uczuć
-Podróż za jeden uśmiech
-Szatan z 7-ej klasy
-=======================
-Dla dorosłych:
-Gwiezdne Wojny
-Szklana Pułapka
-Titanic
-=======================
+<h2>2. Polyfill dla metody Array.from</h2>
 
-</pre>
+<p>Napisz polyfill dla metody Array.from, korzystając wyłącznie z zapisu ES5. W
+nowoczesnych przeglądarkach ta metoda jest zaimplementowana, a zatem dodając
+własną, poprzedź ją przedrostkiem my, w ten sposób Array.myFrom. Metoda ta pozwala
+zamienić obiekt tablicopodobny, a więc zawierający numerowane indeksy i właściwość
+length, na pełnoprawną tablicę. Metodę tę będziesz mógł zatem przetestować np. na
+zmiennej arguments lub na obiekcie NodeList, który zwrócony zostanie z metody
+document.querySelectorAll() kiedy wyszukasz w drzewie DOM wybranych elementów
+HTML.
+</p>
+<p>Zwróć uwagę, że metoda Array.from przyjmuje do trzech argumentów. Jeśli jako drugi
+argument podana zostanie funkcja, to powinna być ona przekazana do metody map, a więc
+każdy element tej tablicy powinien być "przepuszczony" przez tę funkcję. Z kolei ostatni
+argument pozwala na ustawienie kontekstu dla tej funkcji mapującej, a więc tego, co
+znajdzie się pod słowem this wewnątrz tej funkcji.</p>
+<p>    
+Przykładowe użycie tego kodu powinno wyglądać następująco:
+https://pastebin.com/q4MC6zXJ</p>
 
 <h2>3. Funkcja konwertująca wartość na typ Boolean</h2>
 
