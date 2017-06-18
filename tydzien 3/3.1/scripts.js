@@ -15,6 +15,8 @@ String.prototype.repeatCustom = function(n) {
     n = Number(n);
 
 
+
+
     function isInt(x) {
         return Number(x) === x && x % 1 === 0;
     }
@@ -23,6 +25,8 @@ String.prototype.repeatCustom = function(n) {
         return Number(x) === x && x % 1 !== 0;
     }
 
+
+// console.log(arguments[0].toString());
 
 
     if (Number(n) !== n) {
@@ -48,6 +52,10 @@ String.prototype.repeatCustom = function(n) {
         return this.toString();
     }
 
+    // else if (n === Infinity) {
+    //       console.log("nieskonczonosc");
+    //       return;
+    // }
 
     else if (isInt(n)) {
         n = n;
@@ -60,9 +68,8 @@ String.prototype.repeatCustom = function(n) {
     }
 
 
-    return multiplied
 
-// return (new Array (n +1)).join(this.toString());
+    return multiplied
 
 
 };

@@ -119,7 +119,7 @@ toBoolean(“”); // zwraca wartość false</pre>
 <p>
     W standardzie EcmaScript 2015 (o którym więcej w 5 i 6 tygodniu Bootcampu) pojawiła się nowa metoda dostępna na obiektach typu String o nazwie repeat. Jej użycie wygląda następująco:
 </p>
-<code>“hej ”.repeat(3) // zwraca “hej hej hej ”</code>
+<pre>“hej ”.repeat(3) // zwraca “hej hej hej ”</pre>
 
 
 <p>Metoda ta jest dostępna we wszystkich nowoczesnych przeglądarkach internetowych, ale aby poćwiczyć rozszerzanie wbudowanych typów, utwórz jej polyfill. W kodzie sprawdź najpierw czy taka metoda już w przeglądarce została zaimplementowana, a jeśli

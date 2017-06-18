@@ -30,14 +30,14 @@ function getJSON(url, callbackIfSuccess, callbackIfError) {
     var err;
 
 
-    // xhr.onreadystatechange = function() {
-    //     console.log(xhr.readyState);
-    // };
+    xhr.onreadystatechange = function() {
+        console.log(xhr.readyState);
+    };
 
     xhr.onerror = function(e) {
         err = new Error ("Zapytanie do serwera nie powiodło się");
         callbackIfError(err);
-        return err;
+        throw err;
     };
 
     xhr.onload = function() {
@@ -47,7 +47,7 @@ function getJSON(url, callbackIfSuccess, callbackIfError) {
         } else if (xhr.status >= 300) {
             err = "Błąd: "+ xhr.status;
             callbackIfError(err);
-            return err;
+            throw err;
         }
 
     };
