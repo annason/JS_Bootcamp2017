@@ -235,7 +235,7 @@ gdy zostanie wpisane np. jakieś imię, pojawi się ono na stronie. Dodatkowo za
 jeśli nic nie zostało wpisane do pola, nie wstawiać na stronę pustego elementu &lt;li&gt;.</p>
 
 <p>
-    <strong>www: </strong><a href="https://annason.github.io/slidemenu/">https://annason.github.io/slidemenu/</a>
+    <strong>www: </strong><a href="https://annason.github.io/SayHello/">https://annason.github.io/SayHello/</a>
 </p>
 
 
