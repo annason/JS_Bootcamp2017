@@ -207,13 +207,23 @@ Użycie funkcji powinno wyglądać następująco:</p>
 
 <h1><a name="tydzien4"><a>Tydzień 4</h1>
 
-<h2>1. Instrukcje warunkowe</h2>
-<p>Za pomocą instrukcji warunkowej if (wraz z blokami else) lub switch, stwórz skrypt, który w konsoli (za pomocą console.log()) wyświetli cenę produktu, w zależności od liczby zakupionych przez klienta do tej pory produktów.</p>
-<p> Oczywiście wszystko to jest abstrakcyjne, więc musisz utworzyć zmienną, która będzie przechowywała liczbę zakupionych produktów, np. 100, a następnie zmienną z ceną jakiegoś fikcyjnego produktu, np. 50. Poniżej tych dwóch zmiennych utwórz blok instrukcji
-    warunkowych, który ustali ostateczną cenę, w zależności od liczby zakupionych przez klienta produktów. Jeśli zatem klient ma już na koncie od 5 do 20 zakupionych produktów, to przyznaj zniżkę 5%. Jeśli 21 do 50, to 10%, od 51 do 100 produktów daje
-    zniżkę 15%, a powyżej 100 produktów zniżkę w wysokości 20%.</p>
-<p>Musisz zatem obliczyć ostateczną cenę produktu, a następnie wyświetlić w konsoli komunikat, np. “Podstawowa cena produktu to 20zł, po obniżce to 17zł”. Aby to przetestować, będziesz musiał zmieniać liczbę zakupionych przez klienta produktów wzmiennej,
-    w której taką informację zapiszesz.</p>
+<h2>1. Selektory w jQuery</h2>
+<p>Podaj przykłady selektorów, które pozwolą znaleźć na stronie następujące elementy:
+<ul>
+
+<li> wszystkie elementy &lt;div&gt;, posiadające zarówno klasę grid oraz klasę grid-12.</li>
+<li>wszystkie elementy &lt;a&gt;, których atrybut href zaczyna się na “http”, znajdujące się w
+elemencie o klasie nav</li>
+<li>wszystkie elementy &lt;input&gt;, których typ to radio lub checkbox oraz dodatkowo nie są
+aktualnie zaznaczone (checked).</li>
+<li>wyłącznie pierwszy element &lt;p&gt;, który jest pusty (nie zawiera dzieci) oraz znajduje się w
+elemencie &lt;div&gt; z identyfikatorem text</li>
+- wszystkie elementy z klasą pagination-item, które nie są elementem &lt;span&gt;</li>
+</ul>
+</p>
+<p>Uwaga: Możesz utworzyć prostą stronę w HTML, gdzie w jakiś sposób podświetlisz
+znalezione powyższymi selektorami elementy, ale możesz równie dobrze po prostu wypisać
+te selektory w pliku tekstowym, bez tworzenia dla tego przykładu specjalnej strony.</p>
 
 <h2>2. Pętle</h2>
 <p>Stwórz skrypt, który będzie wyświetlał filmy z podanego tutaj obiektu https://pastebin.com/kCbqehMm. Skrypt powinien wyświetlać filmy z 3 kategorii (użyj do tego celu console.log()) w następujący sposób:</p>
