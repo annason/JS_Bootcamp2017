@@ -381,9 +381,8 @@ bez zmian.
     metodę checkNumbers, która pozwoli podać 6 liczb jako osobne argumenty i zwróci obiekt,
     który zawierał będzie właściwości numbers, gdzie będzie tablica z trafionymi liczbami oraz
     count, gdzie będzie liczba trafionych numerów.</p>
-    <p>
 
-    To jednak dopiero początek, gdyż najważniejszym celem tego zadania jest dodanie
+    <p>To jednak dopiero początek, gdyż najważniejszym celem tego zadania jest dodanie
     iteratora do tej klasy. Po poprawnym jego dodaniu, kiedy na obiekcie utworzonym z tej
     klasy użyjemy operatora …spread lub pętli for…of, powinien on zwrócić kolejne
     wylosowane liczby. Przykładowe użycie tego kodu powinno wyglądać następująco:
