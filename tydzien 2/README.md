@@ -3,7 +3,7 @@
 <h2>1. Pokazywanie ukrytego elementu</h2>
 
 <p>
-    Stwórz projekt z ukrytym elementem HTML (np. div z display:none w CSS), a także przyciskiem (button>. Przypisz na kliknięcie przycisku funkcję, która pokaże ukryty element, gdy jest niewidoczny i ukryje go, gdy jest widoczny. Podczas zmiany stanu widoczności
+    Stwórz projekt z ukrytym elementem HTML (np. div z display:none w CSS), a także przyciskiem button. Przypisz na kliknięcie przycisku funkcję, która pokaże ukryty element, gdy jest niewidoczny i ukryje go, gdy jest widoczny. Podczas zmiany stanu widoczności
     tego elementu, zmień również tekst przycisku np. z “Pokaż treść” na “Ukryj treść” i na odwrót.
 </p>
 

@@ -10,7 +10,7 @@
 </ul>
 
 
-<h1><a name="tydzien1"><a>Tydzień 1</h1>
+<h1><a name="tydzien1">Tydzień 1</a></h1>
 
 <h2>1. Instrukcje warunkowe</h2>
 <p>Za pomocą instrukcji warunkowej if (wraz z blokami else) lub switch, stwórz skrypt, który w konsoli (za pomocą console.log()) wyświetli cenę produktu, w zależności od liczby zakupionych przez klienta do tej pory produktów.</p>
@@ -65,12 +65,12 @@ toBoolean(“”); // zwraca wartość false</pre>
 <pre>getDate(); // zwraca np. “17.04.2017”</pre>
 
 
-<h1><a name="tydzien2"><a>Tydzień 2</h1>
+<h1><a name="tydzien2">Tydzień 2</a></h1>
 
 <h2>1. Pokazywanie ukrytego elementu</h2>
 
 <p>
-    Stwórz projekt z ukrytym elementem HTML (np. div z display:none w CSS), a także przyciskiem (button>. Przypisz na kliknięcie przycisku funkcję, która pokaże ukryty element, gdy jest niewidoczny i ukryje go, gdy jest widoczny. Podczas zmiany stanu widoczności
+    Stwórz projekt z ukrytym elementem HTML (np. div z display:none w CSS), a także przyciskiem button. Przypisz na kliknięcie przycisku funkcję, która pokaże ukryty element, gdy jest niewidoczny i ukryje go, gdy jest widoczny. Podczas zmiany stanu widoczności
     tego elementu, zmień również tekst przycisku np. z “Pokaż treść” na “Ukryj treść” i na odwrót.
 </p>
 
@@ -113,7 +113,7 @@ toBoolean(“”); // zwraca wartość false</pre>
 </p>
 
 
-<h1><a name="tydzien3"><a>Tydzień 3</a></h1>
+<h1><a name="tydzien3">Tydzień 3</a></h1>
 
 <h2>1. Polyfill metody repeat dla String</h2>
 
@@ -198,7 +198,7 @@ Użycie funkcji powinno wyglądać następująco:</p>
 </pre>
 
 
-<h1><a name="tydzien4"><a>Tydzień 4</h1>
+<h1><a name="tydzien4">Tydzień 4</a></h1>
 
 <h2>1. Selektory w jQuery</h2>
 <p>Podaj przykłady selektorów, które pozwolą znaleźć na stronie następujące elementy:
@@ -307,7 +307,7 @@ sposób konfigurować pod swoje potrzeby.
 
 
 
-<h1><a name="tydzien5"><a>Tydzień 5</h1>
+<h1><a name="tydzien5">Tydzień 5</a></h1>
 
 <h2>1. Dekompozycja obiektu z danych JSON</h2>
 
@@ -400,3 +400,102 @@ wykorzystaj Promise dostępną w ES6. Załadowane w tle obrazy zamień następni
 elementy <img> i wstaw na stronę. Przykładowe użycie tego kodu powinno wyglądać
 następująco: https://pastebin.com/jM7N6NTn
 </p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h1><a name="tydzien6">Tydzień 6</a></h1>
+
+<h2>1. Wiązanie elementów DOM z danymi z użyciem WeakMap</h2>
+<p>Pamiętasz funkcję getJSON, którą stworzyłeś w tygodniu trzecim? Za jej pomocą pobierz
+dane JSON z tego adresu: http://code.eduweb.pl/bootcamp/json/. Następnie w funkcji
+callback, gdzie te dane będą już zamienione na tablicę JavaScript, dla każdego elementu
+tej tablicy (będzie to obiekt) utwórz dynamicznie element &lt;li&gt; i wstaw go na stronę, do
+wcześniej utworzonego elementu &lt;ul&gt;. W elemencie &lt;li&gt; wstaw na początku wyłącznie
+wartość name z obiektu, ale przypisz też do tego elementu obsługę zdarzenia click. Kiedy
+element zostanie kliknięty, zamień jego wewnętrzny tekst na name oraz email, np. w ten
+sposób:</p>
+
+<pre>
+    <li>Leanne Graham <a href="mailto:Sincere@april.biz">Sincere@april.biz</a></li>
+</pre>
+
+
+<p> Być może zastanawiasz się, jak powiązać element &lt;li&gt; z obiektem, który przechowuje
+potrzebne dla niego dane. W tym celu wykorzystaj WeakMap, gdzie jako klucz podasz
+element z drzewa DOM, czyli &lt;li&gt;, a jako wartość obiekt z danymi. Dzięki temu po
+kliknięciu na element &lt;li&gt;, w funkcji obsługi tego zdarzenia pod this znajdzie się
+odwołanie do tego elementu DOM. Kiedy przekażesz this do WeakMapy, otrzymasz w
+zamian obiekt z pozostałymi danymi. To z nich wyciągniesz name i email, aby
+zaktualizować tekst elementu &lt;li&gt;. Plusem tego rozwiązania jest fakt, że jeśli element
+&lt;li&gt; zostanie usunięty, to również obiekt z danymi zostanie usunięty z pamięci, bo takie
+zadanie realizuje właśnie WeakMap.</p>
+
+<h2>2. Pętle</h2>
+<p>Stwórz skrypt, który będzie wyświetlał filmy z podanego tutaj obiektu https://pastebin.com/kCbqehMm. Skrypt powinien wyświetlać filmy z 3 kategorii (użyj do tego celu console.log()) w następujący sposób:</p>
+<pre>Dla dzieci:
+Kubuś Puchatek i Przyjaciele
+Zwariowane Melodie
+Piotruś Pan
+=======================
+Dla młodzieży:
+Szkoła uczuć
+Podróż za jeden uśmiech
+Szatan z 7-ej klasy
+=======================
+Dla dorosłych:
+Gwiezdne Wojny
+Szklana Pułapka
+Titanic
+=======================
+
+</pre>
+
+<h2>3. Funkcja konwertująca wartość na typ Boolean</h2>
+
+<p>Utwórz funkcję o nazwie toBoolean, która będzie przyjmowała jeden parametr. Po przekazaniu do niej wartości przy jej wywołaniu, wartość ta powinna zostać skonwertowana na typ Boolean, czyli na true lub false. Funkcja ta powinna tę wartość zwrócić. Przykładowe
+    jej użycie powinno wyglądać tak:</p>
+
+<pre>toBoolean(20); // zwraca wartość true
+toBoolean(“”); // zwraca wartość false</pre>
+
+
+<h2>4. Funkcja sumująca przekazane liczby</h2>
+
+<p>Stwórz funkcję o nazwie sum, która będzie przyjmowała jeden parametr, którym będzie tablica z liczbami. Funkcja ta powinna zsumować wszystkie liczby z przekazanej tablicy, a następnie zwrócić wynik takiej operacji. Przykładowe jej użycie powinno wyglądać
+    tak:
+</p>
+
+<pre>sum([1, 10, 5, 4]); // zwraca wartość 20</pre>
+
+
+<h2>5. Funkcja zwracająca sformatowaną datę</h2>
+
+<p>Utwórz funkcję o nazwie getDate, która po wywołaniu zwróci aktualną, sformatowaną datę. Data powinna być w formacie dd.mm.rrrr, czyli np. 17.04.2017. Przykładowe użycie tej funkcji powinno wyglądać następująco:</p>
+
+<pre>getDate(); // zwraca np. “17.04.2017”</pre>
