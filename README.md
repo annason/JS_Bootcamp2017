@@ -113,7 +113,7 @@ toBoolean(“”); // zwraca wartość false</pre>
 </p>
 
 
-<h1><a name="tydzien3"><a>Tydzień 3</h1>
+<h1><a name="tydzien3"><a>Tydzień 3</a></h1>
 
 <h2>1. Polyfill metody repeat dla String</h2>
 
