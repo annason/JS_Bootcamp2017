@@ -198,14 +198,6 @@ Użycie funkcji powinno wyglądać następująco:</p>
 </pre>
 
 
-
-
-
-
-
-
-
-
 <h1><a name="tydzien4"><a>Tydzień 4</h1>
 
 <h2>1. Selektory w jQuery</h2>
@@ -226,7 +218,7 @@ elemencie &lt;div&gt; z identyfikatorem text</li>
 znalezione powyższymi selektorami elementy, ale możesz równie dobrze po prostu wypisać
 te selektory w pliku tekstowym, bez tworzenia dla tego przykładu specjalnej strony.</p>
 
-<h2>2. Pokazywanie elementów i animacje</h2>h2>
+<h2>2. Pokazywanie elementów i animacje</h2>
 <p>Stwórz kontener z przykładową nawigacją, który domyślnie nie będzie widoczny. Może on
 znajdować się na samej górze strony lub w sidebarze. Następnie umieść na stronie
 przycisk typu “hamburger menu” ☰, po kliknięciu którego wysunie się wcześniej ukryte
