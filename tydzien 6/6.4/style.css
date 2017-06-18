@@ -1,0 +1,71 @@
+Body {
+    background: #f3f3f3;
+}
+ output {
+     transition: all 1s;
+    font-size:19px;
+     padding:30px;
+     border-radius:15px;
+
+
+ }
+
+
+
+
+
+ .imgparent {
+     margin-bottom:30px;
+ }
+
+
+ .img-thumbnail {
+     border: 1px solid #eee;
+     padding: 10px;
+
+ }
+
+/*animations*/
+
+output img {
+    -webkit-animation: fadeInFromNone 0.5s ease-out;
+    -moz-animation: fadeInFromNone 0.5s ease-out;
+    -o-animation: fadeInFromNone 0.5s ease-out;
+    animation: fadeInFromNone 0.5s ease-out;
+}
+output
+{
+
+    -webkit-animation: fadeInFromNone 0.7s ease-out;
+    -moz-animation: fadeInFromNone 0.7s ease-out;
+    -o-animation: fadeInFromNone 0.7s ease-out;
+    animation: fadeInFromNone 0.7s ease-out;
+}
+
+@-webkit-keyframes fadeInFromNone {
+    0% {
+        display: none;
+        opacity: 0;
+    }
+
+    1% {
+        display: block;
+        opacity: 0;
+    }
+
+    100% {
+        display: block;
+        opacity: 1;
+    }
+}
+
+@-moz-keyframes fadeInFromNone {
+    0% {
+        display: none;
+        opacity: 0;
+    }
+
+    1% {
+        display: block;
+        opacity: 0;
+    }

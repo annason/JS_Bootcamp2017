@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Tydzień 5 - zadanie 2</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/polo-base.css" />
+    <link rel="stylesheet" type="text/css" href="css/color-mint.css" />
+    <link href="https://fonts.googleapis.com/css?family=Raleway:400,500,600,700,800,900&amp;subset=latin-ext" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&amp;subset=latin-ext" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="style.css" />
+
+</head>
+
+<body>
+
+    <section id="shop-cart">
+        <div class="container">
+            <div class="shop-cart">
+                <div class="table table-condensed table-striped table-responsive">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th class="cart-product-remove"></th>
+                                <th class="cart-product-thumbnail">Produkt</th>
+
+                                <th class="cart-product-price">Cena PLN</th>
+                                <th class="cart-product-quantity">Ilość</th>
+                                <th class="cart-product-subtotal">Suma PLN</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="cart-product-remove">
+                                    <a href="#"><i class="fa fa-close"></i></a>
+                                </td>
+
+                                <td class="cart-product-thumbnail">
+                                    <a href="#">
+                                        <img src="img/pendrive.png">
+                                    </a>
+                                    <div class="cart-product-thumbnail-name">Name</div>
+                                </td>
+
+
+
+                                <td class="cart-product-price">
+                                    <span class="amount">Price</span>
+                                </td>
+
+                                <td class="cart-product-quantity">
+                                    <div class="quantity">
+                                        <input type="button" class="minus" value="-">
+                                        <input type="text" class="qty" value="1" name="quantity">
+                                        <input type="button" class="plus" value="+">
+                                    </div>
+                                </td>
+
+                                <td class="cart-product-subtotal">
+                                    <span class="amount">Subtotal</span>
+                                </td>
+                            </tr>
+
+
+
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+                <div class="row">
+                    <hr class="space">
+                    <div class="col-md-6">
+                        <h4>Przelicz na walutę</h4>
+                        <form class="row">
+                            <div class="col-md-12 m-b-20">
+                                <select class="fullwidth currency">
+    								<option value="GBP">Funt Brytyjski (£)</option>
+    								<option value="USD">Dolar Amerykański ($)</option>
+    								<option value="EUR">Euro (€)</option>
+
+    							</select>
+                            </div>
+
+                        </form>
+                        <div class="row">
+                            <div class="col-md-12 m-b-20">
+                                <h5>Aktualne kursy walut</h5>
+                                <ul class="list-group rates">
+                                    <li class="list-group-item"><i class="fa fa-gbp" aria-hidden="true"></i> GBP: </li>
+                                    <li class="list-group-item"><i class="fa fa-usd" aria-hidden="true"></i> USD: </li>
+                                    <li class="list-group-item"><i class="fa fa-eur" aria-hidden="true"></i> EUR: </li>
+
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 p-r-10 ">
+                        <div class="table-responsive">
+                            <h4>Podsumowanie</h4>
+                            <div class="calculated">
+
+                            </div>
+
+
+                        </div>
+
+                        <a  class="gobutton button color button-3d rounded icon-left float-right"><i class="fa fa-shopping-cart" aria-hidden="true"></i><span>Zamawiam z obowiązkiem zapłaty</span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="background-grey" id="footer">
+
+
+
+    	<div class="copyright-content">
+    		<div class="container">
+    			<div class="row">
+    				<div class="gray col-md-6"> <i class="fa fa-heart" aria-hidden="true"></i> Muchas gracias por tu ayuda, <a href="http://api.nbp.pl/" target="blank">API NBP</a>.
+    				</div>
+
+    			</div>
+    		</div>
+    	</div>
+    </footer>
+
+
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="jsonNBP.js"></script>
+    <script src="scripts.js"></script>
+</body>
+
+</html>

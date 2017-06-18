@@ -40,7 +40,7 @@ Toggler.prototype.getElem = function() {
 Toggler.prototype.show = function() {
 
     if (this._element.style.display === 'none') {
-      this._element.style.display = 'inline-block';
+      this._element.style.display = '';
    }
 }
 

@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Tydzień 5 - zadanie 3</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/polo-base.css" />
+    <link rel="stylesheet" type="text/css" href="css/color-mint.css" />
+    <link href="https://fonts.googleapis.com/css?family=Raleway:400,500,600,700,800,900&amp;subset=latin-ext" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&amp;subset=latin-ext" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="style.css" />
+
+</head>
+
+<body>
+
+    <div class="container-full" id="content">
+        <div class="row">
+            <div class="col-md-12">
+
+
+                <div class="col-md-6">
+                    <h1>ES 5:</h1>
+                    <content>
+    <pre><code class="javascript">
+    function EventEmitter() {
+        this.events = {};
+    }
+
+    EventEmitter.prototype.on = function(type, fn) {
+        if(!type || !fn) return;
+        this.events[type] = this.events[type] || [];
+        this.events[type].push(fn);
+    };
+
+    EventEmitter.prototype.emit = function(type, data) {
+        var fns = this.events[type];
+        if(!fns || !fns.length) return;
+        for(var i = 0; i < fns.length; i++) {
+            fns[i](data);
+        }
+    };
+
+    // Child Class
+    function Database(url) {
+
+        EventEmitter.call(this);
+        this.url = url;
+    }
+
+    Database.prototype = Object.create(EventEmitter.prototype);
+
+    Database.prototype.connect = function() {
+        // fikcyjne podłączenie do bazy
+        this.emit("connect", this.url);
+    };
+
+    Database.prototype.disconnect = function() {
+        // fikcyjne zakończenie połączenia z bazą
+        this.emit("disconnect", this.url);
+    };
+
+    // Użycie EventEmittera
+    var ev = new EventEmitter();
+
+    ev.on("hello", function(message) {
+        console.log("Witaj " + message + "!");
+    });
+
+    ev.on("hello", function(message) {
+        console.log("Siema " + message + ".");
+    });
+
+    ev.on("goodbye", function() {
+        console.log("Do widzenia!");
+    });
+
+    ev.emit("hello", "Marek");
+    ev.emit("goodbye");
+    ev.emit("custom"); // nic się nie wydarzy
+
+    var db = new Database("db://localhost:3000"); // fikcyjny adres
+
+    db.on("connect", function(url) {
+        console.log("Połączenie z bazą pod adresem " + url + " zostało ustanowione.");
+    });
+    db.on("disconnect", function(url) {
+        console.log("Połączenie z bazą pod adresem " + url + " zostało zakończone.");
+    });
+    db.connect();
+
+    // po 5 sekundach rozłączamy się
+    setTimeout(function() {
+        db.disconnect();
+    }, 5000);
+    
+    </code></pre>
+                    </content>
+                </div>
+
+                <div class="col-md-6">
+                    <h1>ES 6:</h1>
+                    <content>
+<pre><code class="javascript">
+    class EventEmitter {
+        constructor() {
+            this.events = {};
+        }
+
+        on(type, fn) {
+            if (!type || !fn) return;
+            this.events[type] = this.events[type] || [];
+            this.events[type].push(fn);
+        }
+        emit(type, data) {
+            var fns = this.events[type];
+            if (!fns || !fns.length) return;
+            for (var i = 0; i < fns.length; i++) {
+                fns[i](data);
+            }
+        }
+    }
+
+    // Child Class
+    class Database extends EventEmitter {
+
+        constructor(url) {
+            super();
+            this.url = url;
+        }
+
+        connect() {
+            // fikcyjne podłączenie do bazy
+            this.emit("connect", this.url);
+        }
+
+        disconnect() {
+            // fikcyjne zakończenie połączenia z bazą
+            this.emit("disconnect", this.url);
+        }
+    }
+
+
+    // Użycie EventEmittera
+    var ev = new EventEmitter();
+
+    ev.on("hello", function(message) {
+        console.log("Witaj " + message + "!");
+    });
+
+    ev.on("hello", function(message) {
+        console.log("Siema " + message + ".");
+    });
+
+    ev.on("goodbye", function() {
+        console.log("Do widzenia!");
+    });
+
+    ev.emit("hello", "Marek");
+    ev.emit("goodbye");
+    ev.emit("custom"); // nic się nie wydarzy
+
+    var db = new Database("db://localhost:3000"); // fikcyjny adres
+
+    db.on("connect", function(url) {
+        console.log("Połączenie z bazą pod adresem " + url + " zostało ustanowione.");
+    });
+    db.on("disconnect", function(url) {
+        console.log("Połączenie z bazą pod adresem " + url + " zostało zakończone.");
+    });
+    db.connect();
+
+    // po 5 sekundach rozłączamy się
+    setTimeout(function() {
+        db.disconnect();
+    }, 5000);
+</code></pre>
+                    </content>
+                </div>
+
+
+
+
+            </div>
+
+        </div>
+    </div>
+
+
+
+
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script id='script' src="scripts.js"></script>
+    <!-- <script>$("body").html($('#script')[0].innerHTML);</script> -->
+
+    <link rel="stylesheet" href="vendor/monokai-sublime.css">
+    <script src="vendor/highlight.pack.js"></script>
+    <script>
+        hljs.initHighlightingOnLoad();
+    </script>
+
+
+</body>
+
+</html>

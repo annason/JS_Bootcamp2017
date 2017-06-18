@@ -1,0 +1,44 @@
+Body {
+    background: #f3f3f3;
+}
+ output {
+     transition: all 1s;
+     border: 1px solid #ccc;
+     padding:30px;
+     padding-right:15px;
+     padding-bottom:0px;
+     border-radius:15px;
+     height:auto;
+     display: none;
+     max-width:1000px;
+ }
+
+ output ul li {
+     list-style-type:none;
+     display:inline-block;
+     width:25%;
+     margin-bottom:20px;
+ }
+
+ output span {
+         display:block;
+         margin-bottom:5px;
+ }
+
+ output .name {
+    color: #111;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+    line-height: 1.5;
+    margin: 0 0 10px 0;
+    text-rendering: optimizelegibility;
+    font-size:17px;
+
+
+ }
+
+ output .username:before {
+     content: "\f2be";
+     font-family: FontAwesome;
+     margin-right:5px;
+ }

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Tydzień 5 - zadanie 2</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/polo-base.css" />
+    <link rel="stylesheet" type="text/css" href="css/color-mint.css" />
+    <link href="https://fonts.googleapis.com/css?family=Raleway:400,500,600,700,800,900&amp;subset=latin-ext" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&amp;subset=latin-ext" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="style.css" />
+
+</head>
+
+<body>
+
+    <section id="shop-cart">
+        <div class="container-full">
+            <div class="row" style="text-align:center;">
+
+
+
+                <div id="player"></div>
+                <a><i class="fa fa-arrow-left" aria-hidden="true"></i> Wróć</a>
+            </div>
+        </div>
+    </section>
+
+
+
+    <style>
+        a {
+            display: block;
+            font-size: 17px;
+            margin-top: 20px;
+            cursor: pointer;
+        }
+    </style>
+    <script src="http://www.youtube.com/player_api"></script>
+
+
+    <script>
+        // create youtube player
+        var player;
+
+        function onYouTubePlayerAPIReady() {
+            player = new YT.Player('player', {
+                height: '460.5',
+                width: '853',
+                videoId: '-nOkR7HjyO4',
+                events: {
+                    'onReady': onPlayerReady,
+                    'onStateChange': onPlayerStateChange
+                },
+                playerVars: {
+                    rel: 0,
+                    showinfo: 0,
+                    controls: 0
+
+                }
+            });
+        }
+
+        // autoplay video
+        function onPlayerReady(event) {
+            event.target.playVideo();
+        }
+
+        // when video ends
+        function onPlayerStateChange(event) {
+            if (event.data === 0) {
+                setTimeout(function() {
+                    window.location = 'index.html'
+                }, 1700);
+            }
+        }
+    </script>
+    <script>
+        document.querySelector("a").onclick = function(e) {
+            e.preventDefault;
+            window.location = 'index.html';
+        }
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,63 @@
+Body {
+    background: #f3f3f3;
+}
+ output {
+     transition: all 1s;
+    font-size:19px;
+     padding:30px;
+
+     border-radius:15px;
+     float:left;
+     width:100%;
+
+}
+a {
+    transition: all 0.3s ease-out;
+}
+
+#morediv {
+    text-align:left;
+    display:none;
+}
+
+#morediv h2 {
+    margin-top:30px;
+}
+
+h2 {
+    margin-bottom:20px!important;
+}
+
+#output p span {
+    animation-name: fadeInFromNone;
+       animation-duration: 2.5s;
+}
+
+
+@-webkit-keyframes fadeInFromNone {
+    0% {
+        display: none;
+        opacity: 0;
+    }
+
+    1% {
+        display: block;
+        opacity: 0;
+    }
+
+    100% {
+        display: block;
+        opacity: 1;
+    }
+}
+
+@-moz-keyframes fadeInFromNone {
+    0% {
+        display: none;
+        opacity: 0;
+    }
+
+    1% {
+        display: block;
+        opacity: 0;
+    }

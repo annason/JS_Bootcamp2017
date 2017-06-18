@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Tydzień 6 - zadanie 3</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/polo-base.css" />
+    <link rel="stylesheet" type="text/css" href="css/color-mint.css" />
+    <link href="https://fonts.googleapis.com/css?family=Raleway:400,500,600,700,800,900&amp;subset=latin-ext" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&amp;subset=latin-ext" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="style.css" />
+
+</head>
+
+<body>
+
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-9">
+                    <div class="shop-promo-box text-right">
+                        <h2>Informacja</h2>
+                        <p>Klasa <mark>ExchangeRate</mark> pozwala na pobierania kursów walut udostępnianych przez API NBP.</p>
+                        <p>Klasy dziedziczące <mark>GbpRate</mark>, <mark>UsdRate</mark> oraz <mark>EurRate</mark> pozwalają natomiast pobierać kursy poszczególnych walut</p>
+                        <a class="btn btn-dark" id="morebutton">Więcej</a>
+                        <div id="morediv">
+
+                            <h2>ExchangeRate<small> klasa podstawowa</small></small></h2>
+
+
+                            <p>Instancja klasy ExchangeRate przyjmuje następujące argumenty:</p>
+
+                            <p><code>symbol waluty:</code><br/> (wymagane) trzyliterowy kod waluty (standard ISO 4217), pisany małymi literami</p>
+
+                            <p><code>data:</code><br/> (opcjonalnie) w formacie rrrr-mm-dd<br/> Jeśli data nie zostanie podana, pobrane zostaną dane dla ostatniego zanotowanego przez NBP kursu danej waluty. Podobnie, jeśli data zostanbie podana
+                                niepoprawnie.</p>
+
+                            <p>
+                                <mark>Aby uzyskać dostęp do notowania</mark> należy na instancji klasy wywołać metodę <code>getData()</code>, a nastepnie wywołać funkcję callback która pozwoli na operowanie na obiekcie z kursem waluty.
+                            </p>
+
+                            <p>
+                                funkcja callback metody <code>getData()</code> przekazuje obiekt o następujacych właściwościach:<br /> { <br/> <code>currency:</code> symbol waluty <i>(string)</i>,<br /> <code>name:</code> nazwa waluty w języku polskim <i>(string)</i>,<br /> <code>rate:</code>
+                                średni kurs <i>(number)</i>,<br /> <code>date:</code> data publikacji pobranego kursu średniego <i>(string)</i>,<br /> <code>buy:</code> cena kupna <i>(number)</i>,<br /> <code>sell:</code> cena sprzedaży <i>(string)</i>,<br /> <code>sellbuydate:</code> data publikacji pobranyh
+                                kursów kupna i sprzedaży <i>(string)</i>,<br/> }</p>
+
+                                <p><mark>Przykład użycia:</mark></p>
+
+
+                                <pre><code class="javascript">
+        let instance = new ExchangeRate("gbp", "2016-03-30");
+        instance.getData(obj => console.log(obj));
+
+        /// zaloguje:
+        /// { buy: 5.3643,
+        /// currency:"GBP",
+        /// date:"2016-03-30",
+        /// midRate:5.3974,
+        /// name: "funt szterling",
+        /// sell: 5.4727,
+        /// sellbuydate: "2016-03-30"}
+                                    </code></pre>
+
+
+                                <h2>UsdRate<small> i pozostałe klasy dziedziczące</small></small></h2>
+
+                                <p>
+                                    Klasy <mark>GbpRate</mark>, <mark>UsdRate</mark> oraz <mark>EurRate</mark> dziedziczą z klasy ExchangeRate i działają analogicznie jak ona, z tą różnicą, że nie wymagają podania symbolu waluty. Jedynym argumentem jaki
+                                    przyjmują ich instancje jest opcjonalna data.
+                                </p>
+
+
+
+                                <p>Przykład użycia:</p>
+
+
+                                <pre><code class="javascript">
+        let instance = new EurRate();
+        instance.getData(obj => console.log(obj));
+
+        /// zaloguje:
+        /// { buy:4.1772,
+        /// currency:"EUR",
+        /// date:"2017-05-19",
+        /// midRate:4.2069,
+        /// name:"euro",
+        /// sell:4.2616,
+        /// sellbuydate:"2017-05-19"}
+
+
+</code></pre>
+
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3" id="output">
+                    <div class="shop-promo-box text-left" style="background-image: url(img/flag.png);">
+                        <h2>Przykład</h2>
+                        <p><i class="fa fa-eur" aria-hidden="true"></i> kurs euro: <span></span></p>
+                        <p><i class="fa fa-gbp" aria-hidden="true"></i> kurs funta: <span></span></p>
+                        <p><i class="fa fa-usd" aria-hidden="true"></i> kurs dolara: <span></span></p>
+                        <p class="gray">
+                            <small>z dnia: <span></span></small>
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <script src="js/jquery-3.2.1.min.js"></script>
+
+    <script>
+    $( document ).ready(function() {
+    $("#morebutton").on("click", function(e){
+        e.preventDefault;
+        let that = $(this)[0]
+        $(this).siblings("#morediv").slideToggle();
+        let text = $(this).text();
+        $(this).text( text == "Więcej" ? "Ukryj" : "Więcej");
+
+    });
+
+});
+    </script>
+
+    <!-- syntax highlighter -->
+    <link rel="stylesheet" href="vendor/monokai-sublime.css">
+    <script src="vendor/highlight.pack.js"></script>
+    <script>
+        hljs.initHighlightingOnLoad();
+    </script>
+    <script type="module" src="scripts.js"></script>
+
+</body>
+
+</html>

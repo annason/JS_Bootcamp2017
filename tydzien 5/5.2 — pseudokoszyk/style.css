@@ -1,0 +1,157 @@
+Body {
+    background: #f3f3f3;
+}
+ output {
+     transition: all 1s;
+    font-size:19px;
+     padding:30px;
+
+     border-radius:15px;
+     float:left;
+
+     /*display: none;*/
+ }
+
+ a {
+     transition: 0.4s all linear;
+ }
+
+ output a {
+     text-decoration:underline!important;
+ }
+
+ #load {
+     margin-bottom:20px;
+ }
+
+output .single {
+    margin-bottom:25px;
+}
+
+output i {
+    margin-right:5px;
+}
+
+output span {
+display:block;
+margin-bottom:5px;
+position:relative;
+}
+
+
+output span:first-child
+{
+    display: inline-block;
+    background-color: #9feaf0;
+    transform: scale(1.1) rotate(1deg) skew(-10deg) translate(10px);
+    position: relative;
+    z-index: -1;
+    padding:3px;
+}
+output span:first-child span
+{
+    display: inherit;
+    transform: scale(1) rotate(0deg) skew(0deg);
+}
+
+
+tr {
+    -webkit-transition: opacity 0.25s ease-in-out;
+    -moz-transition: opacity 0.25s ease-in-out;
+    -ms-transition: opacity 0.25s ease-in-out;
+    -o-transition: opacity 0.25 ease-in-out;
+     opacity: 1;
+}
+.zeroop {
+    opacity:0;
+}
+
+.list-group-item {
+    background:none;
+    padding: 5px 20%!important;
+    text-align:center;
+    letter-spacing:0.5px;
+}
+
+.calculated {
+    height:auto;
+    min-height:250px;
+    transition: all 0.5s linear;
+}
+
+
+.table.total {
+    margin-bottom:0px;
+}
+
+.rates .list-group-item span {
+    float:right;
+    font-style:italic;
+    color:#ccc;
+    letter-spacing:0px;
+    font-size:80%;
+}
+
+.gray, .gray a {
+    color:#9a9a9a;
+}
+
+
+
+.background-grey {
+    background-color: #f3f3f3!important;
+}
+
+footer a {
+    text-decoration: underline!important;
+}
+
+/*animations*/
+
+.cart-product-subtotal, .calculated, #shop-cart {
+    -webkit-animation: fadeInFromNone 0.5s ease-out;
+    -moz-animation: fadeInFromNone 0.5s ease-out;
+    -o-animation: fadeInFromNone 0.5s ease-out;
+    animation: fadeInFromNone 0.5s ease-out;
+}
+
+.rates {
+    -webkit-animation: fadeInFromNone 1.9s ease-out;
+    -moz-animation: fadeInFromNone 1.9s ease-out;
+    -o-animation: fadeInFromNone 1.9s ease-out;
+    animation: fadeInFromNone 1.9s ease-out;
+}
+
+table.total>tbody>tr>td {
+    padding: 18px 10px!important;
+
+}
+
+
+@-webkit-keyframes fadeInFromNone {
+    0% {
+        display: none;
+        opacity: 0;
+    }
+
+    1% {
+        display: block;
+        opacity: 0;
+    }
+
+    100% {
+        display: block;
+        opacity: 1;
+    }
+}
+
+@-moz-keyframes fadeInFromNone {
+    0% {
+        display: none;
+        opacity: 0;
+    }
+
+    1% {
+        display: block;
+        opacity: 0;
+    }

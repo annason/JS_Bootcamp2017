@@ -1,0 +1,102 @@
+Body {
+    background: #f3f3f3;
+}
+ output {
+     transition: all 1s;
+    font-size:19px;
+     padding:30px;
+
+     border-radius:15px;
+     float:left;
+
+     /*display: none;*/
+ }
+
+ a {
+     transition: 0.4s all linear;
+ }
+
+ output a {
+     text-decoration:underline!important;
+ }
+
+ #load {
+     margin-bottom:20px;
+ }
+
+output .single {
+    margin-bottom:25px;
+}
+
+output i {
+    margin-right:5px;
+}
+
+output span {
+display:block;
+margin-bottom:5px;
+position:relative;
+}
+
+
+output span:first-child
+{
+    display: inline-block;
+    background-color: #9feaf0;
+    transform: scale(1.1) rotate(1deg) skew(-10deg) translate(10px);
+    position: relative;
+    z-index: -1;
+    padding:3px;
+}
+output span:first-child span
+{
+    display: inherit;
+    transform: scale(1) rotate(0deg) skew(0deg);
+}
+
+
+
+/*animations*/
+
+output .single{
+    -webkit-animation: fadeInFromNone 0.5s ease-out;
+    -moz-animation: fadeInFromNone 0.5s ease-out;
+    -o-animation: fadeInFromNone 0.5s ease-out;
+    animation: fadeInFromNone 0.5s ease-out;
+}
+output
+{
+
+    -webkit-animation: fadeInFromNone 0.4s ease-out;
+    -moz-animation: fadeInFromNone 0.4s ease-out;
+    -o-animation: fadeInFromNone 0.4s ease-out;
+    animation: fadeInFromNone 0.4s ease-out;
+}
+
+@-webkit-keyframes fadeInFromNone {
+    0% {
+        display: none;
+        opacity: 0;
+    }
+
+    1% {
+        display: block;
+        opacity: 0;
+    }
+
+    100% {
+        display: block;
+        opacity: 1;
+    }
+}
+
+@-moz-keyframes fadeInFromNone {
+    0% {
+        display: none;
+        opacity: 0;
+    }
+
+    1% {
+        display: block;
+        opacity: 0;
+    }

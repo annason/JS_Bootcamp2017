@@ -6,7 +6,8 @@
 
 function getDateCustom() {
     var currentDate = new Date();
-    var dd = currentDate.getDate();
+    var ddRaw = currentDate.getDate();
+    var dd = ("0" + ddRaw).slice(-2);
     var mmRaw = currentDate.getMonth() + 1;
     var mm = ("0" + mmRaw).slice(-2);
 	

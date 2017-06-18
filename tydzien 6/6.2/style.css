@@ -1,0 +1,66 @@
+Body {
+    background: #f3f3f3;
+}
+ output {
+     transition: all 1s;
+    font-size:19px;
+     padding:30px;
+
+     border-radius:15px;
+     float:left;
+     width:100%;
+
+}
+a {
+    transition: all 0.3s ease-out;
+}
+
+a:hover {
+    color:white;
+}
+
+span.mail {
+    float:right;
+    background: #e5c06f;
+    text-transform:uppercase;
+    font-size:60%;
+    padding:5px 15px;
+    border-radius: 9px;
+}
+
+output {
+    border:1px solid #ccc;
+    border-radius: 10px;
+}
+
+
+
+
+
+@-webkit-keyframes fadeInFromNone {
+    0% {
+        display: none;
+        opacity: 0;
+    }
+
+    1% {
+        display: block;
+        opacity: 0;
+    }
+
+    100% {
+        display: block;
+        opacity: 1;
+    }
+}
+
+@-moz-keyframes fadeInFromNone {
+    0% {
+        display: none;
+        opacity: 0;
+    }
+
+    1% {
+        display: block;
+        opacity: 0;
+    }

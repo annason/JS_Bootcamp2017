@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Tydzień 4 - zadanie 4 (z handlebars)</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/polo-base.css" />
+    <link rel="stylesheet" type="text/css" href="css/color-mint.css" />
+    <link href="https://fonts.googleapis.com/css?family=Raleway:400,500,600,700,800,900&amp;subset=latin-ext" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&amp;subset=latin-ext" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="style.css" />
+
+</head>
+
+<body>
+
+    <div class="container" id="content">
+        <div class="row">
+            <div class="col-md-12">
+
+
+                <script id="tpl" type="text/x-handlebars-template">
+                    <ul>
+                        {{#each this}}
+                        <li>
+                            <span class="name">{{name}}</span>
+                            <span class="username">{{username}}</span>
+                            <span class="mail">{{email}}</span>
+                            <span class="phone">{{phone}}</span>
+                        </li>
+                        {{/each}}
+                    </ul>
+                </script>
+
+                <output>
+                </output>
+
+                <a id="load" class="button aqua button-3d full-rounded" href="#"><span>Load</span></a>
+
+            </div>
+
+        </div>
+    </div>
+
+
+
+
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/handlebars-v4.0.5.js"></script>
+
+    <script src="scripts.js"></script>
+</body>
+
+</html>
