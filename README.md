@@ -319,9 +319,10 @@ dekompozycję (destructuring), aby utworzyć za pomocą zapisu ES6 nowe zmienne,
 przechowywać będą dane spod kluczy: name, username, email, address.geo[0],
 address.geo[1], website i company.name. Powyższe dane wstaw do template stringu,
 dodając odpowiednie etykiety jak np. Imię, Firma czy Adres e-mail wraz z niezbędnym
-kodem HTML, np. w formie linku dla website. W przypadku współrzędnych
+kodem HTML, np. w formie linku dla website.</p>
+<p> W przypadku współrzędnych
 geograficznych, wstaw je do takiego linku: &lt;a href=“http://bing.com/maps/
-default.aspx?cp=LAT~LON”&gt;  Pokaż na mapie &lt;/a&gt; , gdzie LAT i LON zastąpisz kolejno
+default.aspx?cp=LAT~LON”&gt;  Pokaż na mapie &lt;/a&gt;, gdzie LAT i LON zastąpisz kolejno
 przez address.geo[0] i address.geo[1], które na tym etapie powinny być już w
 zmiennych. Powyższą operację wykonaj oczywiście dla wszystkich obiektów z tablicy.
 Cały sformatowany ciąg wraz ze wstawkami HTML wstaw na stronę. Sam proces
