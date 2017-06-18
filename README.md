@@ -331,10 +331,9 @@ kliknięcia jakiegoś przycisku.
 </p>
 
 <h2>2. Funkcja tagująca do formatowania cen</h2>
-<p>
-    Utwórz funkcję tagującą, która użyta na tzw. template stringu w ES6, sformatuje podane w
-nim ceny za pomocą kodu: n.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, '$1,');
-(pożyczamy ciekawe rozwiązanie z tego postu). Zanim jednak dokonasz takiego
+
+<p>Utwórz funkcję tagującą, która użyta na tzw. template stringu w ES6, sformatuje podane w
+nim ceny za pomocą kodu: n.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, '$1,');. Zanim jednak dokonasz takiego
 formatowania, przelicz cenę przez kurs podanej przy wywołaniu funkcji tagującej waluty.
 Zakładamy, że ceny bazowe są podane w złotówkach, a nazwa i kurs waluty dostępna
 będzie pod window.currencies (mogłaby być w ten sposób dodana np. podczas
@@ -442,7 +441,7 @@ element zostanie kliknięty, zamień jego wewnętrzny tekst na name oraz email, 
 sposób:</p>
 
 <pre>
-    <li>Leanne Graham <a href="mailto:Sincere@april.biz">Sincere@april.biz</a></li>
+<li>Leanne Graham <a href="mailto:Sincere@april.biz">Sincere@april.biz</a></li>
 </pre>
 
 
@@ -472,7 +471,7 @@ argument podana zostanie funkcja, to powinna być ona przekazana do metody map, 
 każdy element tej tablicy powinien być "przepuszczony" przez tę funkcję. Z kolei ostatni
 argument pozwala na ustawienie kontekstu dla tej funkcji mapującej, a więc tego, co
 znajdzie się pod słowem this wewnątrz tej funkcji.</p>
-<p>    
+<p>
 Przykładowe użycie tego kodu powinno wyglądać następująco:
 https://pastebin.com/q4MC6zXJ</p>
 
