@@ -22,6 +22,7 @@
 
 <h2>2. Pętle</h2>
 <p>Stwórz skrypt, który będzie wyświetlał filmy z podanego tutaj obiektu https://pastebin.com/kCbqehMm. Skrypt powinien wyświetlać filmy z 3 kategorii (użyj do tego celu console.log()) w następujący sposób:</p>
+
 <pre>Dla dzieci:
 Kubuś Puchatek i Przyjaciele
 Zwariowane Melodie
@@ -37,7 +38,6 @@ Gwiezdne Wojny
 Szklana Pułapka
 Titanic
 =======================
-
 </pre>
 
 <h2>3. Funkcja konwertująca wartość na typ Boolean</h2>
@@ -185,7 +185,8 @@ fetch("url", function(data) {
 
 <p>Stwórz funkcję o nazwie getPage, która pozwoli odczytać numer strony z adresu URL. Dane na temat adresu URL strony, na której wykonuje się Twój kod JavaScript, możesz odczytać za pomocą obiektu window.location. Dopisz do adresu Twojej strony ?page=2 i
     wykorzystując odpowiednią właściwość obiektu location, a także odpowiednie wyrażenie regularne, zwróć z funkcji 2 (typ Number) lub null, jeśli query string ?page=X nie będzie podany lub będzie niepoprawny, np. ?page=tekst Użycie funkcji powinno wyglądać
-    następująco:</p>
+    następująco:
+</p>
 
 <pre>
 // dla adresu np. http://localhost/test/?page=2
@@ -216,7 +217,7 @@ fetch("url", function(data) {
 <p>Uwaga: Możesz utworzyć prostą stronę w HTML, gdzie w jakiś sposób podświetlisz znalezione powyższymi selektorami elementy, ale możesz równie dobrze po prostu wypisać te selektory w pliku tekstowym, bez tworzenia dla tego przykładu specjalnej strony.</p>
 
 <h2>2. Pokazywanie elementów i animacje</h2>
-<p>Stwórz kontener z przykładową nawigacją, który domyślnie nie będzie widoczny. Może on znajdować się na samej górze strony lub w sidebarze. Następnie umieść na stronie przycisk typu “hamburger menu” ☰, po kliknięciu którego wysunie się wcześniej ukryte
+<p>Stwórz kontener z przykładową nawigacją, który domyślnie nie będzie widoczny. Może on znajdować się na samej górze strony lub w sidebarze. Następnie umieść na stronie przycisk typu “hamburger menu”, po kliknięciu którego wysunie się wcześniej ukryte
     menu. Animacja jaką zastosujesz, zależy od Ciebie. Ponowne kliknięcie przycisku powinno chować nawigację.</p>
 
 <h2>3. Dynamiczne tworzenie elementów</h2>
@@ -276,6 +277,7 @@ fetch("url", function(data) {
     Pamiętasz funkcję getJSON, którą stworzyłeś w tygodniu trzecim? Za jej pomocą pobierz dane JSON z tego adresu: http://code.eduweb.pl/bootcamp/json/. Następnie w funkcji callback, gdzie te dane będą już zamienione na obiekt JavaScript, wykorzystaj dekompozycję
     (destructuring), aby utworzyć za pomocą zapisu ES6 nowe zmienne, które przechowywać będą dane spod kluczy: name, username, email, address.geo[0], address.geo[1], website i company.name. Powyższe dane wstaw do template stringu, dodając odpowiednie
     etykiety jak np. Imię, Firma czy Adres e-mail wraz z niezbędnym kodem HTML, np. w formie linku dla website.</p>
+
 <p> W przypadku współrzędnych geograficznych, wstaw je do takiego linku: &lt;a href=“http://bing.com/maps/ default.aspx?cp=LAT~LON”&gt; Pokaż na mapie &lt;/a&gt;, gdzie LAT i LON zastąpisz kolejno przez address.geo[0] i address.geo[1], które na tym etapie
     powinny być już w zmiennych. Powyższą operację wykonaj oczywiście dla wszystkich obiektów z tablicy. Cały sformatowany ciąg wraz ze wstawkami HTML wstaw na stronę. Sam proces pobierania danych Ajaxem i dalszego ich formatowania, możesz wywołać za
     pomocą kliknięcia jakiegoś przycisku.
@@ -315,8 +317,7 @@ fetch("url", function(data) {
     który zawierał będzie właściwości numbers, gdzie będzie tablica z trafionymi liczbami oraz count, gdzie będzie liczba trafionych numerów.</p>
 
 <p>To jednak dopiero początek, gdyż najważniejszym celem tego zadania jest dodanie iteratora do tej klasy. Po poprawnym jego dodaniu, kiedy na obiekcie utworzonym z tej klasy użyjemy operatora …spread lub pętli for…of, powinien on zwrócić kolejne wylosowane
-    liczby. Przykładowe użycie tego kodu powinno wyglądać następująco: https://pastebin.com/0zygc3hk.
-</p>
+    liczby. Przykładowe użycie tego kodu powinno wyglądać następująco: https://pastebin.com/0zygc3hk.</p>
 
 <h2>5. Preloader obrazów z użyciem Promise</h2>
 
@@ -367,26 +368,19 @@ fetch("url", function(data) {
 
 <p>
 
-Utwórz kilka niezależnych modułów i z każdego z nich coś wyeksportuj, w dowolny,
-wybrany przez Ciebie sposób. Niech jeden z modułów zawiera jakąś przykładową klasę z
-prostymi funkcjonalnościami, drugi inną klasę, która mogłaby dziedziczyć z pierwszej, a
-trzeci (główny moduł) powinien z tych eksportowanych funkcjonalności móc skorzystać.</p>
+    Utwórz kilka niezależnych modułów i z każdego z nich coś wyeksportuj, w dowolny, wybrany przez Ciebie sposób. Niech jeden z modułów zawiera jakąś przykładową klasę z prostymi funkcjonalnościami, drugi inną klasę, która mogłaby dziedziczyć z pierwszej,
+    a trzeci (główny moduł) powinien z tych eksportowanych funkcjonalności móc skorzystać.</p>
 
 <p>
 
-Możesz utworzyć dowolny kod, ale jeśli nie masz pomysłu, to wykorzystaj kod przepisany
-na standard ES6 z zadania trzeciego z poprzedniego tygodnia. W jednym module umieść
-klasę EventEmitter, a w innym klasę Database. W module głównym utwórz nową
-instancję z klasy Database tak, jak to miało miejsce we wspomnianym przykładzie. Aby
-moduły działały poprawnie, wykorzystaj element &gt;script type="module"&gt;.
+    Możesz utworzyć dowolny kod, ale jeśli nie masz pomysłu, to wykorzystaj kod przepisany na standard ES6 z zadania trzeciego z poprzedniego tygodnia. W jednym module umieść klasę EventEmitter, a w innym klasę Database. W module głównym utwórz nową instancję
+    z klasy Database tak, jak to miało miejsce we wspomnianym przykładzie. Aby moduły działały poprawnie, wykorzystaj element &gt;script type="module"&gt;.
 </p>
 
 
 <p>
 
-Uwaga: pamiętaj, że konieczne może być ustawienie odpowiedniej flagi, np. w
-przeglądarce Chrome po przejściu pod adres chrome://flags włącz Experimental Web
-Platform features poprzez kliknięcie Enable.
+    Uwaga: pamiętaj, że konieczne może być ustawienie odpowiedniej flagi, np. w przeglądarce Chrome po przejściu pod adres chrome://flags włącz Experimental Web Platform features poprzez kliknięcie Enable.
 
 </p>
 
