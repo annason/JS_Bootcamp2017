@@ -202,7 +202,7 @@ fetch("url", function(data) {
 
 <h2>1. Selektory w jQuery</h2>
 
-<p>Podaj przykłady selektorów, które pozwolą znaleźć na stronie następujące elementy:
+<p>Podaj przykłady selektorów, które pozwolą znaleźć na stronie następujące elementy:</p>
 
     <ul>
 
@@ -212,7 +212,7 @@ fetch("url", function(data) {
         <li>wyłącznie pierwszy element &lt;p&gt;, który jest pusty (nie zawiera dzieci) oraz znajduje się w elemencie &lt;div&gt; z identyfikatorem text</li>
         <li>wszystkie elementy z klasą pagination-item, które nie są elementem &lt;span&gt;</li>
     </ul>
-</p>
+
 
 <p>Uwaga: Możesz utworzyć prostą stronę w HTML, gdzie w jakiś sposób podświetlisz znalezione powyższymi selektorami elementy, ale możesz równie dobrze po prostu wypisać te selektory w pliku tekstowym, bez tworzenia dla tego przykładu specjalnej strony.</p>
 
@@ -248,14 +248,15 @@ fetch("url", function(data) {
 <h2>5. Własny plugin dla spisu treści</h2>
 
 <p>Napisz własny plugin jQuery o nazwie toc, który umożliwi dynamiczne generowanie spisu treści na podstawie sekcji zawierających treść. TOC to skrót od Table of Contents i oznacza po prostu Spis Treści.</p>
-<p>
 
-    Przygotowałem dla Ciebie pliki startowe, od których powinieneś zacząć. Znajdziesz je tutaj. Zauważ, że plik index.html zawiera kilka sekcji. Każda z nich zawiera nagłówek &lt;h2&gt; oraz treść w postaci paragrafów &lt;p&gt;. Na samym dole strony znajdziesz
+<p>Przygotowałem dla Ciebie pliki startowe, od których powinieneś zacząć. Znajdziesz je tutaj. Zauważ, że plik index.html zawiera kilka sekcji. Każda z nich zawiera nagłówek &lt;h2&gt; oraz treść w postaci paragrafów &lt;p&gt;. Na samym dole strony znajdziesz
     podlinkowane skrypty. Jest to biblioteka jQuery, a także plik jquery.toc.js, w którym powinieneś napisać cały kod pluginu. Poniżej tych skryptów znajduje się skrypt liniowy, wywołujący Twój plugin na zebranych elementach o klasie section. Na samej
     górze strony znajdziesz spis treści, zawarty w elemencie &lt;div&gt; z klasą toc.</p>
+
 <p>Twoim zadaniem będzie usunięcie (ręczne, w kodzie) tego elementu, a następnie napisanie pluginu tak, aby taki element generował i wstawiał go dokładnie w to samo miejsce (podpowiedź: przed pierwszym elementem &lt;section&gt;). Treść odnośnika powinna
     odpowiadać treści nagłówka &lt;h2&gt; każdej sekcji. Dodatkowo stwórz mechanizm, który pozwoli po kliknięciu w wybrany odnośnik spisu treści, przenieść użytkownika do odpowiedniej sekcji (w kodzie, który wstawiłem na sztywno, celowo nie ma tego rozwiązania).
 </p>
+
 <p>Uwaga: Jeśli masz czas i chęci, możesz dodać do swojego pluginu możliwość przekazywania opcji. Jedną z opcji mógłby być np. selektor nagłówka, według którego ma być generowana treść odnośnika w spisie treści, inną opcją np. klasa CSS, która powinna zostać
     dodana do elementu &lt;div&gt;, który w tym momencie ma klasę toc. Pomyśl, jakie jeszcze opcje można byłoby dodać, aby przyszli użytkownicy tego pluginu mogli go w łatwy sposób konfigurować pod swoje potrzeby.
 </p>
@@ -338,6 +339,7 @@ fetch("url", function(data) {
 <h1><a name="tydzien6">Tydzień 6</a></h1>
 
 <h2>1. Wiązanie elementów DOM z danymi z użyciem WeakMap</h2>
+
 <p>Pamiętasz funkcję getJSON, którą stworzyłeś w tygodniu trzecim? Za jej pomocą pobierz dane JSON z tego adresu: http://code.eduweb.pl/bootcamp/json/. Następnie w funkcji callback, gdzie te dane będą już zamienione na tablicę JavaScript, dla każdego elementu
     tej tablicy (będzie to obiekt) utwórz dynamicznie element &lt;li&gt; i wstaw go na stronę, do wcześniej utworzonego elementu &lt;ul&gt;. W elemencie &lt;li&gt; wstaw na początku wyłącznie wartość name z obiektu, ale przypisz też do tego elementu obsługę
     zdarzenia click. Kiedy element zostanie kliknięty, zamień jego wewnętrzny tekst na name oraz email, np. w ten sposób:
@@ -364,14 +366,11 @@ fetch("url", function(data) {
 
 <h2>3. Praca z modułami ES6</h2>
 
+<p> Utwórz kilka niezależnych modułów i z każdego z nich coś wyeksportuj, w dowolny, wybrany przez Ciebie sposób. Niech jeden z modułów zawiera jakąś przykładową klasę z prostymi funkcjonalnościami, drugi inną klasę, która mogłaby dziedziczyć z pierwszej, a trzeci (główny moduł) powinien z tych eksportowanych funkcjonalności móc skorzystać.</p>
+
+
 <p>
-
-    Utwórz kilka niezależnych modułów i z każdego z nich coś wyeksportuj, w dowolny, wybrany przez Ciebie sposób. Niech jeden z modułów zawiera jakąś przykładową klasę z prostymi funkcjonalnościami, drugi inną klasę, która mogłaby dziedziczyć z pierwszej,
-    a trzeci (główny moduł) powinien z tych eksportowanych funkcjonalności móc skorzystać.</p>
-
-
-<p> Możesz utworzyć dowolny kod, ale jeśli nie masz pomysłu, to wykorzystaj kod przepisany na standard ES6 z zadania trzeciego z poprzedniego tygodnia. W jednym module umieść klasę EventEmitter, a w innym klasę Database. W module głównym utwórz nową instancję
-    z klasy Database tak, jak to miało miejsce we wspomnianym przykładzie. Aby moduły działały poprawnie, wykorzystaj element &gt;script type="module"&gt;.
+Możesz utworzyć dowolny kod, ale jeśli nie masz pomysłu, to wykorzystaj kod przepisany na standard ES6 z zadania trzeciego z poprzedniego tygodnia. W jednym module umieść klasę EventEmitter, a w innym klasę Database. W module głównym utwórz nową instancję z klasy Database tak, jak to miało miejsce we wspomnianym przykładzie. Aby moduły działały poprawnie, wykorzystaj element &gt;script type="module"&gt;.
 </p>
 
 
