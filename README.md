@@ -343,9 +343,7 @@ fetch("url", function(data) {
     zdarzenia click. Kiedy element zostanie kliknięty, zamień jego wewnętrzny tekst na name oraz email, np. w ten sposób:
 </p>
 
-<pre>
-<li>Leanne Graham <a href="mailto:Sincere@april.biz">Sincere@april.biz</a></li>
-</pre>
+<pre><li>Leanne Graham <a href="mailto:Sincere@april.biz">Sincere@april.biz</a></li></pre>
 
 
 <p> Być może zastanawiasz się, jak powiązać element &lt;li&gt; z obiektem, który przechowuje potrzebne dla niego dane. W tym celu wykorzystaj WeakMap, gdzie jako klucz podasz element z drzewa DOM, czyli &lt;li&gt;, a jako wartość obiekt z danymi. Dzięki temu
@@ -356,8 +354,8 @@ fetch("url", function(data) {
 
 <p>Napisz polyfill dla metody Array.from, korzystając wyłącznie z zapisu ES5. W nowoczesnych przeglądarkach ta metoda jest zaimplementowana, a zatem dodając własną, poprzedź ją przedrostkiem my, w ten sposób Array.myFrom. Metoda ta pozwala zamienić obiekt
     tablicopodobny, a więc zawierający numerowane indeksy i właściwość length, na pełnoprawną tablicę. Metodę tę będziesz mógł zatem przetestować np. na zmiennej arguments lub na obiekcie NodeList, który zwrócony zostanie z metody document.querySelectorAll()
-    kiedy wyszukasz w drzewie DOM wybranych elementów HTML.
-</p>
+    kiedy wyszukasz w drzewie DOM wybranych elementów HTML.</p>
+
 <p>Zwróć uwagę, że metoda Array.from przyjmuje do trzech argumentów. Jeśli jako drugi argument podana zostanie funkcja, to powinna być ona przekazana do metody map, a więc każdy element tej tablicy powinien być "przepuszczony" przez tę funkcję. Z kolei ostatni
     argument pozwala na ustawienie kontekstu dla tej funkcji mapującej, a więc tego, co znajdzie się pod słowem this wewnątrz tej funkcji.</p>
 <p>
@@ -371,9 +369,9 @@ fetch("url", function(data) {
     Utwórz kilka niezależnych modułów i z każdego z nich coś wyeksportuj, w dowolny, wybrany przez Ciebie sposób. Niech jeden z modułów zawiera jakąś przykładową klasę z prostymi funkcjonalnościami, drugi inną klasę, która mogłaby dziedziczyć z pierwszej,
     a trzeci (główny moduł) powinien z tych eksportowanych funkcjonalności móc skorzystać.</p>
 
-<p>
+</p>
 
-    Możesz utworzyć dowolny kod, ale jeśli nie masz pomysłu, to wykorzystaj kod przepisany na standard ES6 z zadania trzeciego z poprzedniego tygodnia. W jednym module umieść klasę EventEmitter, a w innym klasę Database. W module głównym utwórz nową instancję
+<p> Możesz utworzyć dowolny kod, ale jeśli nie masz pomysłu, to wykorzystaj kod przepisany na standard ES6 z zadania trzeciego z poprzedniego tygodnia. W jednym module umieść klasę EventEmitter, a w innym klasę Database. W module głównym utwórz nową instancję
     z klasy Database tak, jak to miało miejsce we wspomnianym przykładzie. Aby moduły działały poprawnie, wykorzystaj element &gt;script type="module"&gt;.
 </p>
 
