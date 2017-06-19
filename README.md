@@ -369,7 +369,6 @@ fetch("url", function(data) {
     Utwórz kilka niezależnych modułów i z każdego z nich coś wyeksportuj, w dowolny, wybrany przez Ciebie sposób. Niech jeden z modułów zawiera jakąś przykładową klasę z prostymi funkcjonalnościami, drugi inną klasę, która mogłaby dziedziczyć z pierwszej,
     a trzeci (główny moduł) powinien z tych eksportowanych funkcjonalności móc skorzystać.</p>
 
-</p>
 
 <p> Możesz utworzyć dowolny kod, ale jeśli nie masz pomysłu, to wykorzystaj kod przepisany na standard ES6 z zadania trzeciego z poprzedniego tygodnia. W jednym module umieść klasę EventEmitter, a w innym klasę Database. W module głównym utwórz nową instancję
     z klasy Database tak, jak to miało miejsce we wspomnianym przykładzie. Aby moduły działały poprawnie, wykorzystaj element &gt;script type="module"&gt;.
