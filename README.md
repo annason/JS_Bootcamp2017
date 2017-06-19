@@ -202,16 +202,19 @@ fetch("url", function(data) {
 
 <h2>1. Selektory w jQuery</h2>
 
-<p>Podaj przykłady selektorów, które pozwolą znaleźć na stronie następujące elementy:</p>
+<p>Podaj przykłady selektorów, które pozwolą znaleźć na stronie następujące elementy:
 
     <ul>
-
         <li> wszystkie elementy &lt;div&gt;, posiadające zarówno klasę grid oraz klasę grid-12.</li>
         <li>wszystkie elementy &lt;a&gt;, których atrybut href zaczyna się na “http”, znajdujące się w elemencie o klasie nav</li>
         <li>wszystkie elementy &lt;input&gt;, których typ to radio lub checkbox oraz dodatkowo nie są aktualnie zaznaczone (checked).</li>
         <li>wyłącznie pierwszy element &lt;p&gt;, który jest pusty (nie zawiera dzieci) oraz znajduje się w elemencie &lt;div&gt; z identyfikatorem text</li>
         <li>wszystkie elementy z klasą pagination-item, które nie są elementem &lt;span&gt;</li>
     </ul>
+
+</p>
+
+
 
 
 <p>Uwaga: Możesz utworzyć prostą stronę w HTML, gdzie w jakiś sposób podświetlisz znalezione powyższymi selektorami elementy, ale możesz równie dobrze po prostu wypisać te selektory w pliku tekstowym, bez tworzenia dla tego przykładu specjalnej strony.</p>
