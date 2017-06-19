@@ -1,4 +1,4 @@
-# JS Bootcamp 2017
+
 
 <ul>
     <li><a href="#tydzien1">tydzień 1</a></li>
@@ -378,9 +378,7 @@ Możesz utworzyć dowolny kod, ale jeśli nie masz pomysłu, to wykorzystaj kod 
 
 
 <p>
-
     Uwaga: pamiętaj, że konieczne może być ustawienie odpowiedniej flagi, np. w przeglądarce Chrome po przejściu pod adres chrome://flags włącz Experimental Web Platform features poprzez kliknięcie Enable.
-
 </p>
 
 
