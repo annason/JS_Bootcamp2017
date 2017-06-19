@@ -1,6 +1,5 @@
 # JS Bootcamp 2017 - tydzień 1
 
-
 <h2>1. Instrukcje warunkowe</h2>
 <p>Za pomocą instrukcji warunkowej if (wraz z blokami else) lub switch, stwórz skrypt, który w konsoli (za pomocą console.log()) wyświetli cenę produktu, w zależności od liczby zakupionych przez klienta do tej pory produktów.</p>
 <p> Oczywiście wszystko to jest abstrakcyjne, więc musisz utworzyć zmienną, która będzie przechowywała liczbę zakupionych produktów, np. 100, a następnie zmienną z ceną jakiegoś fikcyjnego produktu, np. 50. Poniżej tych dwóch zmiennych utwórz blok instrukcji

@@ -15,8 +15,6 @@
 </p>
 
 
-
-
 <p>Uwaga: Możesz utworzyć prostą stronę w HTML, gdzie w jakiś sposób podświetlisz znalezione powyższymi selektorami elementy, ale możesz równie dobrze po prostu wypisać te selektory w pliku tekstowym, bez tworzenia dla tego przykładu specjalnej strony.</p>
 
 <h2>2. Pokazywanie elementów i animacje</h2>

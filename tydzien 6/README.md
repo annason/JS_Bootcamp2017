@@ -1,7 +1,6 @@
 # JS Bootcamp 2017 - tydzień 6
 
 
-
 <h2>1. Wiązanie elementów DOM z danymi z użyciem WeakMap</h2>
 
 <p>Pamiętasz funkcję getJSON, którą stworzyłeś w tygodniu trzecim? Za jej pomocą pobierz dane JSON z tego adresu: http://code.eduweb.pl/bootcamp/json/. Następnie w funkcji callback, gdzie te dane będą już zamienione na tablicę JavaScript, dla każdego elementu

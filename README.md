@@ -400,6 +400,7 @@ webpacka bundle, a więc jeden plik, który zawierał będzie wszystkie potrzebn
 Dodatkowo skonfiguruj babel-loader tak, aby kod napisany w standardzie ES6, został
 przetranspilowany do kodu w standardzie ES5 (babel-preset-es2015), a także
 zminifikowany.</p>
+
 <p>Przed umieszczeniem plików dla tego zadania na Slacku, usuń katalog node_modules, ale
 pozostaw plik package.json, w którym wylistowane powinny być wszystkie potrzebne
 zależności tego projektu. Dzięki temu jednym poleceniem (npm install) będzie można

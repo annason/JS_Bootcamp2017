@@ -1,6 +1,5 @@
 # JS Bootcamp 2017 - tydzień 2
 
-
 <h2>1. Pokazywanie ukrytego elementu</h2>
 
 <p>

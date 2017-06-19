@@ -1,6 +1,5 @@
 # JS Bootcamp 2017 - tydzień 5
 
-
 <h2>1. Dekompozycja obiektu z danych JSON</h2>
 
 <p>

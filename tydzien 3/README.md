@@ -1,7 +1,6 @@
 # JS Bootcamp 2017 - tydzień 3
 
 
-
 <h2>1. Polyfill metody repeat dla String</h2>
 
 <p>
