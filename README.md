@@ -385,17 +385,25 @@ fetch("url", function(data) {
 </p>
 
 
-<h2>4. Funkcja sumująca przekazane liczby</h2>
+<h2>4. Funkcja asynchroniczna dla ładowania obrazów</h2>
 
-<p>Stwórz funkcję o nazwie sum, która będzie przyjmowała jeden parametr, którym będzie tablica z liczbami. Funkcja ta powinna zsumować wszystkie liczby z przekazanej tablicy, a następnie zwrócić wynik takiej operacji. Przykładowe jej użycie powinno wyglądać
-    tak:
+<p>Przepisz utworzony w poprzednim tygodniu w zadaniu czwartym kod tak, aby korzystał z
+funkcji asynchronicznej (async await). Oczywiście nadal będzie ona współpracować z
+Promise, ale samo jej użycie będzie inne niż w przypadku .then i .catch. Zadbaj również
+o to, aby w ciele funkcji asynchronicznej znalazł się blok try...catch(), który przechwyci
+ewentualne błędy, gdy Promise zakończy się w stanie rejected.
 </p>
 
-<pre>sum([1, 10, 5, 4]); // zwraca wartość 20</pre>
 
 
-<h2>5. Funkcja zwracająca sformatowaną datę</h2>
+<h2>5. Bundlowanie modułów z webpack i praca z Babel</h2>
 
-<p>Utwórz funkcję o nazwie getDate, która po wywołaniu zwróci aktualną, sformatowaną datę. Data powinna być w formacie dd.mm.rrrr, czyli np. 17.04.2017. Przykładowe użycie tej funkcji powinno wyglądać następująco:</p>
-
-<pre>getDate(); // zwraca np. “17.04.2017”</pre>
+<p>Z napisanego w zadaniu trzecim kodu (lub innego, jeśli chcesz) utwórz z pomocą
+webpacka bundle, a więc jeden plik, który zawierał będzie wszystkie potrzebne moduły.
+Dodatkowo skonfiguruj babel-loader tak, aby kod napisany w standardzie ES6, został
+przetranspilowany do kodu w standardzie ES5 (babel-preset-es2015), a także
+zminifikowany.</p>
+<p>Przed umieszczeniem plików dla tego zadania na Slacku, usuń katalog node_modules, ale
+pozostaw plik package.json, w którym wylistowane powinny być wszystkie potrzebne
+zależności tego projektu. Dzięki temu jednym poleceniem (npm install) będzie można
+zainstalować te zależności.</p>
